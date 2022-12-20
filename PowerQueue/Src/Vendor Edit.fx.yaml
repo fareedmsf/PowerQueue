@@ -60,10 +60,11 @@
     CheckboxActive As checkbox:
         BorderColor: =RGBA(0, 0, 0, 1)
         CheckboxBorderColor: =RGBA(0, 0, 0, 1)
-        Default: =If(Gallery7_1.Selected.Active="✔",true,false)
-        DisplayMode: =If(btnclick, DisplayMode.Edit, DisplayMode.Disabled)
+        Default: =If(Gallery7_1.Selected.Active="Yes",true,false)
+        DisplayMode: =
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
+        OnCheck: =
         Text: ="Active"
         X: =448
         Y: =441
@@ -197,7 +198,9 @@
         Button8 As button:
             Fill: =RGBA(83, 35, 127, 1)
             HoverFill: =RGBA(83, 35, 127, 0.5)
-            OnSelect: =Remove(AGI_Vendors,Gallery7_1.Selected)
+            OnSelect: |-
+                =Remove(AGI_Vendors,Gallery7_1.Selected);
+                Navigate('Vendor List')
             Text: ="Delete"
             Visible: =If(deletebtnclick,true,false)
             X: =758
