@@ -49,7 +49,7 @@
             FontWeight: =FontWeight.Semibold
             OnSelect: =Select(Parent)
             Size: =15
-            Text: =If(ThisItem.Active,"✔","✘")
+            Text: =If(ThisItem.Active="Yes","✔","✘")
             Width: =122
             X: =Label6_4.X
             Y: =14

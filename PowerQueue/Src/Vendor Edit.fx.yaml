@@ -6,76 +6,69 @@
         FontWeight: =FontWeight.Semibold
         Text: |-
             ="Vendor ID#"
-        X: =438
-        Y: =151
+        X: =448
+        Y: =221
         ZIndex: =1
 
     VendorName As label:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Text: ="Vendor Name"
-        X: =438
-        Y: =228
+        X: =448
+        Y: =298
         ZIndex: =2
 
     VendorTRN As label:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Text: ="Vendor TRN"
-        X: =438
-        Y: =312
+        X: =448
+        Y: =382
         ZIndex: =3
 
     TextInputVendorID As text:
         BorderColor: =RGBA(0, 0, 0, 1)
-        Default: =""
+        Default: =Gallery7_1.Selected.VendorID
+        DisplayMode: =If(btnclick, DisplayMode.Edit, DisplayMode.Disabled)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        X: =588
-        Y: =151
+        X: =598
+        Y: =221
         ZIndex: =4
 
     TextInputVendorName As text:
         BorderColor: =RGBA(0, 0, 0, 1)
-        Default: =""
+        Default: =Gallery7_1.Selected.VendorName
+        DisplayMode: =If(btnclick, DisplayMode.Edit, DisplayMode.Disabled)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        X: =588
-        Y: =228
+        Tooltip: =
+        X: =598
+        Y: =298
         ZIndex: =5
 
     TextInputLastVendorTRN As text:
         BorderColor: =RGBA(0, 0, 0, 1)
-        Default: =""
+        Default: =Gallery7_1.Selected.VendorTRN
+        DisplayMode: =If(btnclick, DisplayMode.Edit, DisplayMode.Disabled)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        X: =588
-        Y: =312
+        X: =598
+        Y: =382
         ZIndex: =6
 
     CheckboxActive As checkbox:
         BorderColor: =RGBA(0, 0, 0, 1)
         CheckboxBorderColor: =RGBA(0, 0, 0, 1)
+        Default: =If(Gallery7_1.Selected.Active="Yes",true,false)
+        DisplayMode: =
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
+        OnCheck: =
         Text: ="Active"
-        X: =438
-        Y: =371
+        X: =448
+        Y: =441
         ZIndex: =7
-
-    Button1_7 As button:
-        Fill: =RGBA(83, 35, 127, 1)
-        Font: =Font.'Segoe UI'
-        HoverFill: =ColorFade(RGBA(83, 35, 127, 1), -20%)
-        RadiusBottomLeft: =50
-        RadiusBottomRight: =50
-        RadiusTopLeft: =50
-        RadiusTopRight: =50
-        Size: =13
-        Text: ="Edit"
-        X: =480
-        Y: =456
-        ZIndex: =9
 
     Rectangle1_17 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 1)
@@ -109,13 +102,108 @@
         Fill: =RGBA(83, 35, 127, 1)
         Font: =Font.'Segoe UI'
         HoverFill: =ColorFade(RGBA(83, 35, 127, 1), -20%)
+        OnSelect: =Set(deletebtnclick, true)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(83, 35, 127, 1), -20%)
         RadiusBottomLeft: =50
         RadiusBottomRight: =50
         RadiusTopLeft: =50
         RadiusTopRight: =50
         Size: =13
         Text: ="Delete"
-        X: =711
-        Y: =456
+        X: =721
+        Y: =526
         ZIndex: =14
+
+    Rectangle1_10 As rectangle:
+        Fill: =RGBA(235, 219, 250, 1)
+        Height: =45
+        Width: =1366
+        Y: =100
+        ZIndex: =15
+
+    Icon1_3 As icon.ChevronLeft:
+        Height: =30
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Back(ScreenTransition.Cover)
+        Width: =42
+        Y: =107
+        ZIndex: =16
+
+    Button1_17 As button:
+        Fill: =RGBA(83, 35, 127, 1)
+        Font: =Font.'Segoe UI'
+        HoverFill: =ColorFade(RGBA(83, 35, 127, 1), -20%)
+        OnSelect: =Set(btnclick, true)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(83, 35, 127, 1), -20%)
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Size: =13
+        Text: ="Edit"
+        X: =457
+        Y: =526
+        ZIndex: =22
+
+    GroupPopup As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =22
+
+        Rectangle5 As rectangle:
+            Fill: =RGBA(255, 255, 255, 0.5)
+            Height: =768
+            Visible: =If(deletebtnclick,true,false)
+            Width: =1366
+            ZIndex: =17
+
+        Rectangle6 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =252
+            Visible: =If(deletebtnclick,true,false)
+            Width: =598
+            X: =384
+            Y: =239
+            ZIndex: =18
+
+        Label16 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =83
+            Size: =15
+            Text: ="Are you sure you want to delete the record?"
+            Visible: =If(deletebtnclick,true,false)
+            Width: =452
+            X: =457
+            Y: =297
+            ZIndex: =19
+
+        Button6 As button:
+            BorderColor: =ColorFade(Self.Fill, -100%)
+            Color: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(83, 35, 127, 0.5)
+            OnSelect: =Set(deletebtnclick,false)
+            Text: ="Close"
+            Visible: =If(deletebtnclick,true,false)
+            X: =448
+            Y: =401
+            ZIndex: =20
+
+        Button8 As button:
+            Fill: =RGBA(83, 35, 127, 1)
+            HoverFill: =RGBA(83, 35, 127, 0.5)
+            OnSelect: |-
+                =Remove(AGI_Vendors,Gallery7_1.Selected);
+                Navigate('Vendor List')
+            Text: ="Delete"
+            Visible: =If(deletebtnclick,true,false)
+            X: =758
+            Y: =401
+            ZIndex: =21
 
