@@ -16,6 +16,65 @@
     ],
     "id": "1472b4a9-7583-43d3-80d8-c2019665f748"
   },
+  "7f0c9a70-916b-4904-85bc-d371bc9a631f": {
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-19.centralindia.logic.azure.com:443/workflows/418000c5d3f344b28894f9052ddebaa8/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Bh4aJP7osow-jTmdUczEA8mzJuX9sfLo_0WttV1IjOU",
+      "workflowEndpoint": "/subscriptions/c17c41e6-fd14-42bf-8563-5171aa5a255e/resourceGroups/86fb359e13604ab3b90d2a68e8c007b9-fc07808804064a86bfc168f3bd1fd51a/providers/Microsoft.Logic/workflows/e6fdc02d-eac8-44dc-a2d8-db939960c605",
+      "workflowEntityId": "45b15a17-2880-ed11-81ad-000d3ac9b1c8",
+      "workflowName": "e6fdc02d-eac8-44dc-a2d8-db939960c605",
+      "workflowPath": "/subscriptions/c17c41e6-fd14-42bf-8563-5171aa5a255e/resourceGroups/86fb359e13604ab3b90d2a68e8c007b9-fc07808804064a86bfc168f3bd1fd51a/providers/Microsoft.Logic/workflows/e6fdc02d-eac8-44dc-a2d8-db939960c605"
+    },
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {
+          "value": "45b15a17-2880-ed11-81ad-000d3ac9b1c8"
+        },
+        "workflowName": {
+          "value": "e6fdc02d-eac8-44dc-a2d8-db939960c605"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {
+          "value": "45b15a17-2880-ed11-81ad-000d3ac9b1c8"
+        },
+        "workflowName": {
+          "value": "e6fdc02d-eac8-44dc-a2d8-db939960c605"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "GetDataURI"
+    ],
+    "dependencies": {
+      "shared_commondataserviceforapps": "a0d4f601-64c6-4cdb-b419-a84d477f7765",
+      "shared_commondataserviceforapps_1": "a0d4f601-64c6-4cdb-b419-a84d477f7765",
+      "shared_commondataserviceforapps_2": "a0d4f601-64c6-4cdb-b419-a84d477f7765"
+    },
+    "dependents": [],
+    "id": "7f0c9a70-916b-4904-85bc-d371bc9a631f"
+  },
+  "a0d4f601-64c6-4cdb-b419-a84d477f7765": {
+    "connectionParameters": {
+      "sku": "Enterprise",
+      "token:grantType": "code"
+    },
+    "connectionRef": {
+      "displayName": "Microsoft Dataverse",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/juanq/releases/v1.0.1609-localization/1.0.1609.3085/commondataserviceforapps/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_commondataserviceforapps"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "7f0c9a70-916b-4904-85bc-d371bc9a631f"
+    ],
+    "id": "a0d4f601-64c6-4cdb-b419-a84d477f7765"
+  },
   "a25ddbac-3ddb-45de-83df-260b4f58ed63": {
     "connectionParameters": {
       "workFlowCallbackUri": "https://prod-19.centralindia.logic.azure.com:443/workflows/4d7383d274a9438583deb769088d49e4/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=5t0Se2K4cZYi8gwT7HmQpGLBKQ3wRvr4xTx55ZHDpqc",

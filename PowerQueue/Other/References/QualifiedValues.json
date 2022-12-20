@@ -71,6 +71,27 @@
       }
     },
     {
+      "Kind": "default.cds_crd1e_agi_user_bu_forms",
+      "Namespace": "AGI_User_BUS (Forms)",
+      "Values": {
+        "Information": "9217825d-6a3b-482c-ab40-ed79f9eda358"
+      }
+    },
+    {
+      "Kind": "default.cds_crd1e_agi_user_legalentity_forms",
+      "Namespace": "AGI_User_LegalEntities (Forms)",
+      "Values": {
+        "Information": "055a47bd-0c91-42ea-80bd-37954b0f21af"
+      }
+    },
+    {
+      "Kind": "default.cds_crd1e_agivendor_user_forms",
+      "Namespace": "AGIVendor_Users (Forms)",
+      "Values": {
+        "Information": "fedff446-946c-450a-bd5d-cfd66de5f5a2"
+      }
+    },
+    {
       "Kind": "default.cds_account_forms",
       "Namespace": "Accounts (Forms)",
       "Values": {
@@ -95,27 +116,6 @@
       "Namespace": "DocumentControllers (Forms)",
       "Values": {
         "Information": "f145e185-ac83-4490-834c-b4427a8bb1f3"
-      }
-    },
-    {
-      "Kind": "default.cds_crd1e_agi_user_bu_forms",
-      "Namespace": "AGI_User_BUS (Forms)",
-      "Values": {
-        "Information": "9217825d-6a3b-482c-ab40-ed79f9eda358"
-      }
-    },
-    {
-      "Kind": "default.cds_crd1e_agi_user_legalentity_forms",
-      "Namespace": "AGI_User_LegalEntities (Forms)",
-      "Values": {
-        "Information": "055a47bd-0c91-42ea-80bd-37954b0f21af"
-      }
-    },
-    {
-      "Kind": "default.cds_crd1e_agivendor_user_forms",
-      "Namespace": "AGIVendor_Users (Forms)",
-      "Values": {
-        "Information": "fedff446-946c-450a-bd5d-cfd66de5f5a2"
       }
     }
   ]

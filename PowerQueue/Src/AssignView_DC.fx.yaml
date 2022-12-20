@@ -1,5 +1,5 @@
 AssignView_DC As screen:
-    OnVisible: =Set(pdfData,GetDataURI.Run(Gallery1.Selected.Name,Gallery1.Selected.'File Name',"Original"));
+    OnVisible: =Set(pdfData,GetDataURI.Run(Gallery1.Selected.Name,"Original"));
 
     Container1 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(240, 243, 248, 1)
@@ -356,7 +356,7 @@ AssignView_DC As screen:
         Height: =30
         HoverFill: =RGBA(255, 255, 255, 1)
         Items: =Filter(AGI_PowerQueue_Attachments,DocumentNo=Gallery1.Selected.Name)
-        OnSelect: =Set(pdfData,GetDataURI.Run(Gallery1.Selected.Name,Dropdown1_8.SelectedText.AttachmentName,"Supporting"))
+        OnSelect: =Set(pdfData,GetDataURI.Run(Gallery1.Selected.Name,"Supporting"))
         PressedFill: =RGBA(0, 0, 0, 0)
         SelectionColor: =RGBA(166, 166, 166, 1)
         SelectionFill: =RGBA(0, 0, 0, 0)
