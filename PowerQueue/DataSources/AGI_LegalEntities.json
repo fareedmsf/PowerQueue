@@ -1,0 +1,97 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crd1e_agi_legalentities",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crd1e_agi_legalentity",
+    "MaxGetRowsCount": 500,
+    "Name": "AGI_LegalEntities",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crd1e_agi_legalentity_AsyncOperations": "System Jobs",
+      "crd1e_agi_legalentity_BulkDeleteFailures": "Bulk Delete Failures",
+      "crd1e_agi_legalentity_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crd1e_agi_legalentity_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crd1e_agi_legalentity_ProcessSession": "Process Sessions",
+      "crd1e_agi_legalentity_SyncErrors": "Sync Errors",
+      "crd1e_agi_legalentityid": "AGI_LegalEntity",
+      "crd1e_BU": "BU",
+      "crd1e_legalentity": "Legal Entity",
+      "crd1e_name": "Name",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "AGI_LegalEntities",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "AGI_LegalEntities (Views)",
+    "Name": "_crd1e_agi_legalentity_views",
+    "RelatedEntityName": "AGI_LegalEntities",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "51447951-c094-4366-bff8-4b5b3be3877c": "AGI_LegalEntity Advanced Find View",
+      "883b779b-53a0-4190-a426-0c0fe7d48710": "Active AGI_LegalEntities",
+      "bb8ecda8-d699-4c1a-afd3-6a90ef0ef09c": "Inactive AGI_LegalEntities",
+      "c6103810-28f4-43fc-b151-ad68c0a5a837": "AGI_LegalEntity Associated View",
+      "ee19e7b2-44ab-4a01-b0a5-ad9f18ac1dd0": "AGI_LegalEntity Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (AGI_LegalEntities)",
+    "Name": "crd1e_agi_legalentity_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "AGI_LegalEntities"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "AGI_LegalEntities",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (AGI_LegalEntities)",
+    "Name": "crd1e_agi_legalentity_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "AGI_LegalEntities"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "AGI_LegalEntities",
+    "Type": "OptionSetInfo"
+  }
+]

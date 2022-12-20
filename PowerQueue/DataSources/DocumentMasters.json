@@ -1,0 +1,111 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crd1e_documentcontrollers",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crd1e_documentcontroller",
+    "MaxGetRowsCount": 500,
+    "Name": "DocumentMasters",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crd1e_AssignedTo": "AssignedTo",
+      "crd1e_BU": "BU",
+      "crd1e_crd1e_docuemnt_transaction_DocumentNo_crd": "Docuemnt_Transactions",
+      "crd1e_Department": "Department",
+      "crd1e_document": "Document",
+      "crd1e_documentcontroller_AsyncOperations": "System Jobs",
+      "crd1e_documentcontroller_BulkDeleteFailures": "Bulk Delete Failures",
+      "crd1e_documentcontroller_FileAttachments": "FileAttachments",
+      "crd1e_documentcontroller_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crd1e_documentcontroller_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crd1e_documentcontroller_ProcessSession": "Process Sessions",
+      "crd1e_documentcontroller_SyncErrors": "Sync Errors",
+      "crd1e_documentcontrollerid": "DocumentController",
+      "crd1e_documentnumber": "DocumentNumber",
+      "crd1e_filelink": "File Link",
+      "crd1e_filename": "File Name",
+      "crd1e_inv_voucher": "Inv_Voucher",
+      "crd1e_legalentity": "Legal Entity",
+      "crd1e_name": "Name",
+      "crd1e_Reason": "Reason",
+      "crd1e_status": "Status (crd1e_status)",
+      "crd1e_uploadedon": "UploadedOn",
+      "crd1e_vendor_trn": "Vendor_TRN",
+      "crd1e_VendorName": "VendorID",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status (statecode)",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "DocumentMasters",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "DocumentMasters (Views)",
+    "Name": "_crd1e_documentcontroller_views",
+    "RelatedEntityName": "DocumentMasters",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "54ee41fe-3ed4-44d7-b09b-09779d05be73": "DocumentController Advanced Find View",
+      "70916580-4fd0-4b18-a625-ac2dae3e6a16": "DocumentController Associated View",
+      "b5e66a5c-9f9f-4cd0-9861-3afdfd8773b5": "DocumentController Lookup View",
+      "f16e1734-c05f-49f5-8c00-459f99275081": "Active DocumentControllers",
+      "fba0bbab-db1b-42d5-80e8-d64515c1e9a4": "Inactive DocumentControllers"
+    }
+  },
+  {
+    "DisplayName": "Status (DocumentMasters)",
+    "Name": "crd1e_documentcontroller_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "DocumentMasters"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "DocumentMasters",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (DocumentMasters)",
+    "Name": "crd1e_documentcontroller_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "DocumentMasters"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "DocumentMasters",
+    "Type": "OptionSetInfo"
+  }
+]

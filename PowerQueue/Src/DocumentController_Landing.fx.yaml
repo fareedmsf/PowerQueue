@@ -1,0 +1,530 @@
+DocumentController_Landing As screen:
+    Fill: =RGBA(240, 243, 248,1)
+    OnVisible: |-
+        =UpdateContext({Documents:DocumentMasters})
+
+    "Gallery1 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+        Height: =444
+        Items: |-
+            =Filter(DocumentMasters, UploadedOn>=DatePicker1.SelectedDate,UploadedOn<=DatePicker1_1.SelectedDate )
+            //Documents
+            //DocumentMastersBU.'Business Unit'=ComboBox1.Selected.'Business Unit' ,'Status (crd1e_status)'=ComboBox1_2.Selected.'Status Name',VendorID.VendorID=ComboBox1_1.Selected.VendorID
+        Layout: =Layout.Vertical
+        OnSelect: =Navigate(AssignView_DC,ScreenTransition.Cover)
+        ShowScrollbar: =false
+        TemplateFill: =If(Mod(ThisItem.rowNumber,2),RGBA(255, 255, 255, 1),RGBA(240, 243, 248,1))
+        TemplatePadding: =0
+        TemplateSize: =Min(96, Self.Height - 60)
+        Width: =1366
+        Y: =280
+        ZIndex: =1
+
+        Title2 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =10
+            Text: =ThisItem.DocumentNumber
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth/9
+            X: =Title2_3.X
+            Y: =32
+            ZIndex: =1
+
+        Title2_1 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =10
+            Text: =ThisItem.BU.'Business Unit'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth/9
+            X: =Title2_8.X
+            Y: =32
+            ZIndex: =4
+
+        Title2_2 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =10
+            Text: =ThisItem.BU.'Company Code'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth/9
+            X: =Title2_9.X
+            Y: =32
+            ZIndex: =5
+
+        Title2_5 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =10
+            Text: =ThisItem.Department.'Department Name'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth/9
+            X: =Title2_11.X
+            Y: =32
+            ZIndex: =8
+
+        Title2_6 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =10
+            Text: =Text(DateValue(ThisItem.UploadedOn,"en"),"dd/mm/yyyy")
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth/9
+            X: =Title2_12.X
+            Y: =32
+            ZIndex: =9
+
+        Title2_7 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =10
+            Text: =ThisItem.VendorID.VendorName
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth/9
+            X: =Title2_13.X
+            Y: =32
+            ZIndex: =10
+
+        Title2_53 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =18
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =10
+            Text: =ThisItem.'Status (crd1e_status)'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =130
+            X: =Title2_52.X
+            Y: =32
+            ZIndex: =11
+
+        Image3 As image:
+            Height: =56
+            Image: ='Group 64'
+            OnSelect: =Navigate(AssignView_DC,ScreenTransition.Cover)
+            Visible: =false
+            Width: =81
+            X: =1273
+            Y: =17
+            ZIndex: =12
+
+        Title2_4 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =10
+            Text: =ThisItem.Inv_Voucher
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth/9
+            X: =Title2_10.X
+            Y: =32
+            ZIndex: =13
+
+        Title2_55 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =10
+            Text: =ThisItem.Vendor_TRN
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth/9
+            X: =1010
+            Y: =31
+            ZIndex: =14
+
+        Button4 As button:
+            Fill: =RGBA(109, 49, 162, 1)
+            Height: =22
+            HoverFill: =ColorFade(Self.Fill, -20%)
+            OnSelect: =Navigate(AssignView_DC,ScreenTransition.CoverRight)
+            PressedFill: =Self.Fill
+            Size: =10
+            Text: ="More"
+            Width: =75
+            X: =1273
+            Y: =34
+            ZIndex: =15
+
+    Rectangle1 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Width: =Parent.Width-250
+        X: =250
+        ZIndex: =2
+
+    Label1 As label:
+        FontWeight: =FontWeight.Bold
+        Size: =25
+        Text: ="Power Queue"
+        Width: =300
+        X: =276
+        Y: =30
+        ZIndex: =3
+
+    Image2 As image:
+        Fill: =RGBA(255, 255, 255, 1)
+        Image: =logo
+        Width: =250
+        ZIndex: =4
+
+    TextInput1 As text:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =1
+        Default: =""
+        HintText: ="Search"
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        X: =1024
+        Y: =135
+        ZIndex: =5
+
+    Label2 As label:
+        Text: ="Search"
+        X: =1024
+        Y: =100
+        ZIndex: =6
+
+    Label2_1 As label:
+        Text: ="From"
+        X: =10
+        Y: =100
+        ZIndex: =7
+
+    DatePicker1 As datepicker:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =1
+        DefaultDate: =Min(DocumentMasters,UploadedOn)
+        Format: ="dd/mm/yyyy"
+        IconBackground: =
+        IconFill: =Gray
+        OnSelect: |-
+            =UpdateContext({Documents:Filter(DocumentMasters,UploadedOn>=DatePicker1.SelectedDate,UploadedOn<=DatePicker1_1.SelectedDate)})
+        Width: =160
+        X: =10
+        Y: =136
+        ZIndex: =8
+
+    Label2_2 As label:
+        Text: ="BU"
+        X: =354
+        Y: =100
+        ZIndex: =9
+
+    ComboBox1 As combobox:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        ChevronBackground: =RGBA(0, 0, 0, 0)
+        ChevronFill: =RGBA(166, 166, 166, 1)
+        ChevronHoverBackground: =Self.Fill
+        DisplayFields: =["crd1e_businessunit"]
+        HoverBorderColor: =Self.Fill
+        IsSearchable: =false
+        Items: ='Power BUS'
+        OnSelect: |-
+            =//UpdateContext({Documents:Filter(DocumentMasters,BU.'Business Unit'=ComboBox1.Selected.'Business Unit')})
+        SearchFields: =["crd1e_businessunit"]
+        SearchItems: =[]
+        SelectionColor: =RGBA(166, 166, 166, 1)
+        SelectionFill: =RGBA(0, 0, 0, 0)
+        Width: =210
+        X: =354
+        Y: =136
+        ZIndex: =10
+
+    Label2_3 As label:
+        Text: ="Vendor"
+        X: =807
+        Y: =100
+        ZIndex: =11
+
+    ComboBox1_1 As combobox:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =1
+        ChevronBackground: =RGBA(0, 0, 0, 0)
+        ChevronFill: =RGBA(166, 166, 166, 1)
+        ChevronHoverBackground: =Self.Fill
+        DisplayFields: =["crd1e_vendorname"]
+        Items: =AGI_Vendors
+        OnSelect: |-
+            =//UpdateContext({Documents:Filter(DocumentMasters,VendorID.VendorID=ComboBox1_1.Selected.VendorID)})
+        SearchFields: =["crd1e_vendorname"]
+        SearchItems: =Search(AGI_Vendors,ComboBox1_1.SearchText,"crd1e_vendorname")
+        SelectionColor: =RGBA(166, 166, 166, 1)
+        SelectionFill: =RGBA(0, 0, 0, 0)
+        Width: =210
+        X: =800
+        Y: =135
+        ZIndex: =12
+
+    Rectangle1_1 As rectangle:
+        Fill: =RGBA(163, 22, 124, 1)
+        Height: =70
+        Width: =1366
+        Y: =210
+        ZIndex: =13
+
+    Title2_3 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        Height: =Self.Size * 1.8
+        OnSelect: =
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =12
+        Text: |-
+            ="Document #"
+        VerticalAlign: =VerticalAlign.Top
+        Y: =231
+        ZIndex: =14
+
+    Title2_8 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        Height: =Self.Size * 1.8
+        OnSelect: =
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =12
+        Text: ="Business Unit"
+        VerticalAlign: =VerticalAlign.Top
+        X: =257
+        Y: =231
+        ZIndex: =15
+
+    Title2_9 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        Height: =23
+        OnSelect: =
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =12
+        Text: ="Legal Entity"
+        VerticalAlign: =VerticalAlign.Top
+        X: =397
+        Y: =231
+        ZIndex: =16
+
+    Title2_11 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        Height: =Self.Size * 1.8
+        OnSelect: =
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =12
+        Text: ="Department"
+        VerticalAlign: =VerticalAlign.Top
+        X: =537
+        Y: =231
+        ZIndex: =18
+
+    Title2_12 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        Height: =Self.Size * 1.8
+        OnSelect: =
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =12
+        Text: ="Uploaded On"
+        VerticalAlign: =VerticalAlign.Top
+        X: =691
+        Y: =231
+        ZIndex: =19
+
+    Title2_13 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        Height: =Self.Size * 1.8
+        OnSelect: =
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =12
+        Text: ="Vendor Name"
+        VerticalAlign: =VerticalAlign.Top
+        X: =859
+        Y: =231
+        ZIndex: =20
+
+    Title2_52 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        Height: =Self.Size * 1.8
+        OnSelect: =
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =12
+        Text: ="Status"
+        VerticalAlign: =VerticalAlign.Top
+        X: =1148
+        Y: =231
+        ZIndex: =21
+
+    Rectangle4 As rectangle:
+        Fill: =RGBA(0, 0, 0, 1)
+        Width: =1
+        X: =264
+        ZIndex: =22
+
+    DatePicker1_1 As datepicker:
+        BorderColor: =Gray
+        BorderThickness: =1
+        DefaultDate: =Max(DocumentMasters,UploadedOn)
+        Format: ="dd/mm/yyyy"
+        IconBackground: =
+        IconFill: =Gray
+        OnSelect: |-
+            =UpdateContext({Documents:Filter(DocumentMasters,UploadedOn>=DatePicker1.SelectedDate,UploadedOn<=DatePicker1_1.SelectedDate)})
+        Width: =160
+        X: =182
+        Y: =136
+        ZIndex: =23
+
+    Label2_4 As label:
+        Text: ="To"
+        X: =182
+        Y: =100
+        ZIndex: =24
+
+    ComboBox1_2 As combobox:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =1
+        ChevronBackground: =RGBA(0, 0, 0, 0)
+        ChevronFill: =RGBA(166, 166, 166, 1)
+        ChevronHoverBackground: =Self.Fill
+        DisplayFields: =["crd1e_statusname"]
+        Items: =Queue_Statuses
+        OnSelect: |-
+            =//UpdateContext({Documents:Filter(DocumentMasters,'Status (crd1e_status)'=ComboBox1_2.Selected.'Status Name')})
+        SearchFields: =["crd1e_name"]
+        SearchItems: =Search(Queue_Statuses,ComboBox1_2.SearchText,"crd1e_name")
+        SelectionColor: =RGBA(166, 166, 166, 1)
+        SelectionFill: =RGBA(0, 0, 0, 0)
+        SelectMultiple: =false
+        Width: =210
+        X: =578
+        Y: =136
+        ZIndex: =25
+
+    Label2_5 As label:
+        Text: ="Status"
+        X: =580
+        Y: =100
+        ZIndex: =26
+
+    Title2_10 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        Height: =21
+        OnSelect: =
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =12
+        Text: ="Invoice "
+        VerticalAlign: =VerticalAlign.Top
+        X: =114
+        Y: =231
+        ZIndex: =27
+
+    Title2_54 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        Height: =Self.Size * 1.8
+        OnSelect: =
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =12
+        Text: ="Vendor TRN"
+        VerticalAlign: =VerticalAlign.Top
+        X: =1010
+        Y: =231
+        ZIndex: =28
+
+    Icon2 As icon.Reload:
+        Height: =30
+        Icon: =Icon.Reload
+        OnSelect: =Refresh(DocumentMasters)
+        Width: =30
+        X: =516
+        Y: =38
+        ZIndex: =29
+

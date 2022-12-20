@@ -1,0 +1,98 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crd1e_documentreasons",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crd1e_documentreason",
+    "MaxGetRowsCount": 500,
+    "Name": "Document Reasons",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crd1e_crd1e_docuemnt_transaction_RejectReason_c": "Docuemnt_Transactions",
+      "crd1e_crd1e_documentcontroller_Reason_crd1e_doc": "DocumentMasters",
+      "crd1e_documentreason_AsyncOperations": "System Jobs",
+      "crd1e_documentreason_BulkDeleteFailures": "Bulk Delete Failures",
+      "crd1e_documentreason_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crd1e_documentreason_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crd1e_documentreason_ProcessSession": "Process Sessions",
+      "crd1e_documentreason_SyncErrors": "Sync Errors",
+      "crd1e_documentreasonid": "Document Reason",
+      "crd1e_name": "Reason Code",
+      "crd1e_reason": "Reason",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Document Reasons",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Document Reasons (Views)",
+    "Name": "_crd1e_documentreason_views",
+    "RelatedEntityName": "Document Reasons",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "1fc292dc-a061-4e20-b534-e7e0450243e6": "Document Reason Associated View",
+      "5f35d016-ab17-4e08-b369-e8d690baecc0": "Active Document Reasons",
+      "b7101419-808b-4620-8486-873e212491fe": "Document Reason Lookup View",
+      "bc2cf2ed-ffa9-47dd-9331-c807236ae876": "Inactive Document Reasons",
+      "ee3a8734-876f-4879-9e35-46b6c51753c0": "Document Reason Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Status (Document Reasons)",
+    "Name": "crd1e_documentreason_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Document Reasons"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Document Reasons",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Document Reasons)",
+    "Name": "crd1e_documentreason_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Document Reasons"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Document Reasons",
+    "Type": "OptionSetInfo"
+  }
+]

@@ -1,0 +1,96 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crd1e_queue_statuses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crd1e_queue_status",
+    "MaxGetRowsCount": 500,
+    "Name": "Queue_Statuses",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crd1e_name": "StatusId",
+      "crd1e_queue_status_AsyncOperations": "System Jobs",
+      "crd1e_queue_status_BulkDeleteFailures": "Bulk Delete Failures",
+      "crd1e_queue_status_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crd1e_queue_status_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crd1e_queue_status_ProcessSession": "Process Sessions",
+      "crd1e_queue_status_SyncErrors": "Sync Errors",
+      "crd1e_queue_statusid": "Queue_Status",
+      "crd1e_statusname": "Status Name",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Queue_Statuses",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Queue_Statuses (Views)",
+    "Name": "_crd1e_queue_status_views",
+    "RelatedEntityName": "Queue_Statuses",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "1ab92e31-c4a1-42bf-9841-ea6782e54f19": "Queue_Status Advanced Find View",
+      "3e706ab6-16f6-48c9-b547-5e45f34f6e1f": "Queue_Status Lookup View",
+      "7a73df09-91e3-47a0-83be-7290da2d8335": "Inactive Queue_Statuses",
+      "d42b4db6-7bc3-4089-b08a-e1c0bc7ee3c7": "Active Queue_Statuses",
+      "f3f7ce23-0b5f-430f-8c12-2011b9acfa7a": "Queue_Status Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (Queue_Statuses)",
+    "Name": "crd1e_queue_status_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Queue_Statuses"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Queue_Statuses",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Queue_Statuses)",
+    "Name": "crd1e_queue_status_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Queue_Statuses"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Queue_Statuses",
+    "Type": "OptionSetInfo"
+  }
+]

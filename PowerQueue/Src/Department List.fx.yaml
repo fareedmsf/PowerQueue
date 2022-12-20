@@ -1,0 +1,182 @@
+"'Department List' As screen":
+
+    "Gallery7_3 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =466
+        Items: =AGI_Departments
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =79
+        Width: =982
+        X: =182
+        Y: =232
+        ZIndex: =3
+
+        Separator4_3 As rectangle:
+            Fill: =RGBA(240, 243, 248,1)
+            Height: =10
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =68
+            ZIndex: =3
+
+        Label4_8 As label:
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            FontWeight: =FontWeight.Bold
+            Height: =42
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.'Department Code'
+            Width: =196
+            X: =19
+            Y: =13
+            ZIndex: =4
+
+        Label5_7 As label:
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            FontWeight: =FontWeight.Bold
+            Height: =37
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.'Department Name'
+            Width: =178
+            X: =261
+            Y: =15
+            ZIndex: =5
+
+        Icon1_7 As icon.Cancel:
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            Color: =RGBA(255, 0, 0, 1)
+            Height: =39
+            Icon: =Icon.Cancel
+            OnSelect: =Select(Parent)
+            Width: =47
+            X: =855
+            Y: =14
+            ZIndex: =9
+
+        Icon3_3 As icon.Edit:
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            Color: =RGBA(50, 86, 160, 1)
+            Height: =39
+            Icon: =Icon.Edit
+            OnSelect: =Navigate('Department Edit')
+            Width: =44
+            X: =734
+            Y: =13
+            ZIndex: =10
+
+        Rectangle3_4 As rectangle:
+            Fill: =RGBA(83, 35, 127, 1)
+            Height: =68
+            OnSelect: =Select(Parent)
+            Width: =4
+            ZIndex: =11
+
+        Label5_9 As label:
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            FontWeight: =FontWeight.Bold
+            Height: =37
+            OnSelect: =Select(Parent)
+            Text: ="label"
+            Width: =178
+            X: =485
+            Y: =14
+            ZIndex: =12
+
+    Rectangle2_4 As rectangle:
+        Fill: =RGBA(235, 219, 250, 1)
+        Height: =40
+        Width: =982
+        X: =182
+        Y: =178
+        ZIndex: =5
+
+    Label4_9 As label:
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        Color: =RGBA(83, 35, 127, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =39
+        OnSelect: =
+        Text: ="DEPARTMENT ID"
+        Width: =167
+        X: =200
+        Y: =178
+        ZIndex: =6
+
+    Label5_8 As label:
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        Color: =RGBA(83, 35, 127, 1)
+        FontWeight: =FontWeight.Bold
+        OnSelect: =
+        Text: ="DEPARTMENT NAME"
+        Width: =236
+        X: =442
+        Y: =178
+        ZIndex: =7
+
+    Label9_6 As label:
+        Color: =RGBA(83, 35, 127, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =37
+        Text: ="EDIT"
+        Width: =55
+        X: =911
+        Y: =181
+        ZIndex: =8
+
+    Label9_7 As label:
+        Color: =RGBA(83, 35, 127, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =38
+        Text: ="DELETE"
+        Width: =83
+        X: =1030
+        Y: =178
+        ZIndex: =9
+
+    Label5_10 As label:
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        Color: =RGBA(83, 35, 127, 1)
+        FontWeight: =FontWeight.Bold
+        OnSelect: =
+        Text: ="BUSINESS UNIT"
+        Width: =193
+        X: =666
+        Y: =178
+        ZIndex: =10
+
+    Rectangle1_22 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Width: =Parent.Width-250
+        X: =250
+        ZIndex: =11
+
+    Label1_16 As label:
+        FontWeight: =FontWeight.Bold
+        Size: =25
+        Text: ="Power Queue"
+        Width: =300
+        X: =276
+        Y: =30
+        ZIndex: =12
+
+    Image2_16 As image:
+        Fill: =RGBA(255, 255, 255, 1)
+        Image: =logo
+        Width: =250
+        ZIndex: =13
+
+    Rectangle4_16 As rectangle:
+        Fill: =RGBA(0, 0, 0, 1)
+        Width: =1
+        X: =264
+        ZIndex: =14
+

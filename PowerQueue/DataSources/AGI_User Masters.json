@@ -1,0 +1,110 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crd1e_agi_usermaters",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crd1e_agi_usermater",
+    "MaxGetRowsCount": 500,
+    "Name": "AGI_User Masters",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crd1e_active": "Active",
+      "crd1e_agi_usermater_AsyncOperations": "System Jobs",
+      "crd1e_agi_usermater_BulkDeleteFailures": "Bulk Delete Failures",
+      "crd1e_agi_usermater_DuplicateBaseRecord": "Duplicate Records (crd1e_agi_usermater_DuplicateBaseRecord)",
+      "crd1e_agi_usermater_DuplicateMatchingRecord": "Duplicate Records (crd1e_agi_usermater_DuplicateMatchingRecord)",
+      "crd1e_agi_usermater_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crd1e_agi_usermater_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crd1e_agi_usermater_ProcessSession": "Process Sessions",
+      "crd1e_agi_usermater_SyncErrors": "Sync Errors",
+      "crd1e_agi_usermaterid": "AGI_User Mater",
+      "crd1e_businessunit": "BusinessUnit",
+      "crd1e_contactnumber": "Contact Number",
+      "crd1e_crd1e_docuemnt_transaction_AssignedBy_crd": "Docuemnt_Transactions (crd1e_crd1e_docuemnt_transaction_AssignedBy_crd)",
+      "crd1e_crd1e_docuemnt_transaction_AssignedTo_crd": "Docuemnt_Transactions (crd1e_crd1e_docuemnt_transaction_AssignedTo_crd)",
+      "crd1e_crd1e_documentcontroller_AssignedTo_crd1e": "DocumentMasters",
+      "crd1e_email": "Email",
+      "crd1e_firstname": "FirstName",
+      "crd1e_lastname": "LastName",
+      "crd1e_legalentity": "LegalEntity",
+      "crd1e_manager": "Manager",
+      "crd1e_name": "Name",
+      "crd1e_role": "Role",
+      "crd1e_userid": "UserID",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "AGI_User Masters",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "AGI_User Masters (Views)",
+    "Name": "_crd1e_agi_usermater_views",
+    "RelatedEntityName": "AGI_User Masters",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "05296139-fb34-431c-80a8-dd32b1474847": "Active AGI_User Maters",
+      "369259d6-476a-4bf8-b597-71ac0b71152d": "AGI_User Mater Lookup View",
+      "3738e5e7-ed0b-4a3a-9d3e-2ff7319c0adc": "Inactive AGI_User Maters",
+      "47f42802-be40-4f8d-9ebe-d3d02b04eeea": "AGI_User Mater Associated View",
+      "83875d2e-4a24-4342-af8d-9e1674b03d35": "AGI_User Mater Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Status (AGI_User Masters)",
+    "Name": "crd1e_agi_usermater_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "AGI_User Masters"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "AGI_User Masters",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (AGI_User Masters)",
+    "Name": "crd1e_agi_usermater_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "AGI_User Masters"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "AGI_User Masters",
+    "Type": "OptionSetInfo"
+  }
+]

@@ -1,0 +1,275 @@
+AssignView_PC As screen:
+
+    Container1_1 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(240, 243, 248, 1)
+        Height: =623
+        Width: =604
+        Y: =145
+        ZIndex: =8
+
+        Label3_4 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Text: |-
+                ="Vendor: "
+            X: =11
+            Y: =40
+            ZIndex: =1
+
+        Label3_5 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Text: |-
+                ="DocumentNo: "
+            X: =11
+            Y: =120
+            ZIndex: =2
+
+        Label3_6 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Text: |-
+                ="Bussiness Unit: "
+            X: =11
+            Y: =206
+            ZIndex: =3
+
+        Label3_7 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Text: |-
+                ="Legal Entity: "
+            X: =11
+            Y: =282
+            ZIndex: =4
+
+        TextInput2_1 As text:
+            Default: =""
+            DisplayMode: =DisplayMode.Disabled
+            Font: =Font.'Segoe UI'
+            Height: =30
+            Width: =328
+            X: =235
+            Y: =45
+            ZIndex: =5
+
+        Button1_1 As button:
+            Fill: =RGBA(83, 35, 127, 1)
+            HoverFill: =ColorFade(RGBA(83, 35, 127, 1) ,-20%)
+            OnSelect: |-
+                =UpdateContext({Rej_Popup:true})
+            Text: ="Reject"
+            X: =23
+            Y: =468
+            ZIndex: =9
+
+        Button1_2 As button:
+            Fill: =RGBA(83, 35, 127, 1)
+            HoverFill: =ColorFade(RGBA(83, 35, 127, 1), -20%)
+            OnSelect: =
+            Text: =If(Gallery1_2.Selected.'Status (crd1e_status)'in ["New","Draft"],"Accept","Close")
+            X: =225
+            Y: =468
+            ZIndex: =10
+
+        Button1_3 As button:
+            Fill: =RGBA(83, 35, 127, 1)
+            HoverFill: =ColorFade(RGBA(83, 35, 127, 1), -20%)
+            OnSelect: =Navigate(AssignTO_PC,ScreenTransition.Cover)
+            Text: ="ReAssign"
+            X: =418
+            Y: =468
+            ZIndex: =11
+
+        Label3_8 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Text: |-
+                ="Inv Voucher:"
+            X: =11
+            Y: =360
+            ZIndex: =12
+
+        TextInput2_2 As text:
+            Default: =""
+            DisplayMode: =If(Gallery1_2.Selected.'Status (crd1e_status)'in ["New","Draft"],DisplayMode.Disabled,DisplayMode.Edit)
+            Font: =Font.'Segoe UI'
+            Height: =30
+            Width: =328
+            X: =235
+            Y: =365
+            ZIndex: =13
+
+        TextInput2_5 As text:
+            Default: =""
+            DisplayMode: =DisplayMode.Disabled
+            Font: =Font.'Segoe UI'
+            Height: =30
+            Width: =328
+            X: =235
+            Y: =130
+            ZIndex: =14
+
+        TextInput2_6 As text:
+            Default: =""
+            DisplayMode: =DisplayMode.Disabled
+            Font: =Font.'Segoe UI'
+            Height: =30
+            Width: =328
+            X: =235
+            Y: =216
+            ZIndex: =15
+
+        TextInput2_7 As text:
+            Default: =""
+            DisplayMode: =DisplayMode.Disabled
+            Font: =Font.'Segoe UI'
+            Height: =30
+            Width: =328
+            X: =235
+            Y: =287
+            ZIndex: =16
+
+    PdfViewer1_1 As pdfViewer:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(0, 0, 0, 0.5)
+        Height: =623
+        ShowControls: =true
+        Width: =762
+        X: =604
+        Y: =145
+        ZIndex: =9
+
+    Rectangle1_9 As rectangle:
+        Fill: =RGBA(235, 219, 250, 1)
+        Height: =45
+        Width: =1366
+        Y: =100
+        ZIndex: =10
+
+    Icon1_1 As icon.ChevronLeft:
+        Height: =30
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Back(ScreenTransition.Cover)
+        Width: =42
+        X: =10
+        Y: =107
+        ZIndex: =11
+
+    Label4_1 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Size: =15
+        Text: =Gallery1.Selected.Name
+        X: =Parent.Width/2 -150
+        Y: =102
+        ZIndex: =12
+
+    Rectangle1_8 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Width: =Parent.Width-250
+        X: =250
+        ZIndex: =21
+
+    Group1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =21
+
+        Rectangle2 As rectangle:
+            Fill: =RGBA(54, 49, 49, 0.36)
+            Height: =Parent.Height
+            Visible: =If(Rej_Popup,true,false)
+            Width: =Parent.Width
+            ZIndex: =13
+
+        Rectangle3 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =383
+            Visible: =If(Rej_Popup,true,false)
+            Width: =566
+            X: =388
+            Y: =208
+            ZIndex: =14
+
+        Label5 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Size: =15
+            Text: ="Reject Reason"
+            Visible: =If(Rej_Popup,true,false)
+            X: =596
+            Y: =222
+            ZIndex: =15
+
+        Dropdown2 As dropdown:
+            Items: ='Document Reasons'
+            Visible: =If(Rej_Popup,true,false)
+            Width: =455
+            X: =448
+            Y: =320
+            ZIndex: =16
+
+        Label6 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Text: ="Select Reason"
+            Visible: =If(Rej_Popup,true,false)
+            X: =446
+            Y: =280
+            ZIndex: =17
+
+        Button2 As button:
+            OnSelect: |-
+                =UpdateContext({Rej_Popup:false})
+            Text: ="Cancel"
+            Visible: =If(Rej_Popup,true,false)
+            X: =507
+            Y: =529
+            ZIndex: =18
+
+        Button2_1 As button:
+            OnSelect: |-
+                =UpdateContext({Rej_Popup:false})
+            Text: ="Ok"
+            Visible: =If(Rej_Popup,true,false)
+            X: =683
+            Y: =529
+            ZIndex: =19
+
+        TextInput3 As text:
+            Default: =""
+            Height: =104
+            HintText: ="Comment"
+            Mode: =TextMode.MultiLine
+            Visible: =If(Rej_Popup,true,false)
+            Width: =455
+            X: =448
+            Y: =379
+            ZIndex: =20
+
+    Label1_4 As label:
+        FontWeight: =FontWeight.Bold
+        Size: =25
+        Text: ="Power Queue"
+        Width: =300
+        X: =276
+        Y: =30
+        ZIndex: =22
+
+    Image2_4 As image:
+        Fill: =RGBA(255, 255, 255, 1)
+        Image: =logo
+        Width: =250
+        ZIndex: =23
+
+    Rectangle4_2 As rectangle:
+        Fill: =RGBA(0, 0, 0, 1)
+        Width: =1
+        X: =264
+        ZIndex: =24
+

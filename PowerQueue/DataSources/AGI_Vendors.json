@@ -1,0 +1,103 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crd1e_agi_vendors",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crd1e_agi_vendor",
+    "MaxGetRowsCount": 500,
+    "Name": "AGI_Vendors",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crd1e_active": "Active",
+      "crd1e_agi_vendor_AsyncOperations": "System Jobs",
+      "crd1e_agi_vendor_BulkDeleteFailures": "Bulk Delete Failures",
+      "crd1e_agi_vendor_DuplicateBaseRecord": "Duplicate Records (crd1e_agi_vendor_DuplicateBaseRecord)",
+      "crd1e_agi_vendor_DuplicateMatchingRecord": "Duplicate Records (crd1e_agi_vendor_DuplicateMatchingRecord)",
+      "crd1e_agi_vendor_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crd1e_agi_vendor_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crd1e_agi_vendor_ProcessSession": "Process Sessions",
+      "crd1e_agi_vendor_SyncErrors": "Sync Errors",
+      "crd1e_agi_vendorid": "AGI_Vendor",
+      "crd1e_crd1e_docuemnt_transaction_VendorName_crd": "Docuemnt_Transactions",
+      "crd1e_crd1e_documentcontroller_VendorName_crd1e": "DocumentMasters",
+      "crd1e_name": "Name",
+      "crd1e_vendorid": "VendorID",
+      "crd1e_vendorname": "VendorName",
+      "crd1e_vendortrn": "VendorTRN",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "AGI_Vendors",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "AGI_Vendors (Views)",
+    "Name": "_crd1e_agi_vendor_views",
+    "RelatedEntityName": "AGI_Vendors",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "3e924a5c-cfd4-46f2-b6c5-52c372217272": "Inactive AGI_Vendors",
+      "53daa2f6-37a9-4175-afd8-f7f50e11ff4b": "AGI_Vendor Advanced Find View",
+      "7394e2c6-4006-4a76-a3b4-7b1e7b54b33a": "AGI_Vendor Lookup View",
+      "cb60cd6c-3545-4219-8f45-8a823d2d5af2": "AGI_Vendor Associated View",
+      "ed02acae-356b-4efd-9360-d26c36e9bd14": "Active AGI_Vendors"
+    }
+  },
+  {
+    "DisplayName": "Status (AGI_Vendors)",
+    "Name": "crd1e_agi_vendor_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "AGI_Vendors"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "AGI_Vendors",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (AGI_Vendors)",
+    "Name": "crd1e_agi_vendor_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "AGI_Vendors"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "AGI_Vendors",
+    "Type": "OptionSetInfo"
+  }
+]

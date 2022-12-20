@@ -1,0 +1,107 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crd1e_docuemnt_transactions",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crd1e_docuemnt_transaction",
+    "MaxGetRowsCount": 500,
+    "Name": "Docuemnt_Transactions",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crd1e_AssignedBy": "AssignedBy",
+      "crd1e_AssignedTo": "AssignedTo",
+      "crd1e_BussinessUnit": "Bussiness Unit",
+      "crd1e_Department": "Department",
+      "crd1e_docuemnt_transaction_AsyncOperations": "System Jobs",
+      "crd1e_docuemnt_transaction_BulkDeleteFailures": "Bulk Delete Failures",
+      "crd1e_docuemnt_transaction_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crd1e_docuemnt_transaction_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crd1e_docuemnt_transaction_ProcessSession": "Process Sessions",
+      "crd1e_docuemnt_transaction_SyncErrors": "Sync Errors",
+      "crd1e_docuemnt_transactionid": "Docuemnt_Transaction",
+      "crd1e_DocumentNo": "DocumentNo",
+      "crd1e_documentstatus": "DocumentStatus",
+      "crd1e_invoiceno": "InvoiceNo",
+      "crd1e_legalentity": "Legal Entity",
+      "crd1e_name": "TransNo",
+      "crd1e_RejectReason": "RejectReason",
+      "crd1e_vendorid": "Vendor Name",
+      "crd1e_VendorName": "Vendor ID",
+      "crd1e_vendortrn": "VendorTRN",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Docuemnt_Transactions",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Docuemnt_Transactions (Views)",
+    "Name": "_crd1e_docuemnt_transaction_views",
+    "RelatedEntityName": "Docuemnt_Transactions",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "2371f62b-76a4-493a-9f30-0541245a22ad": "Docuemnt_Transaction Associated View",
+      "533903fe-a596-42d2-9f6d-831b341cce43": "Inactive Docuemnt_Transactions",
+      "8793298c-d941-4f64-91f7-79e321b0ae68": "Docuemnt_Transaction Lookup View",
+      "d3a6d764-2b47-4af8-b071-a14959dd3597": "Docuemnt_Transaction Advanced Find View",
+      "ff6bb4ac-bedf-4404-a7c3-294620e0e868": "Active Docuemnt_Transactions"
+    }
+  },
+  {
+    "DisplayName": "Status (Docuemnt_Transactions)",
+    "Name": "crd1e_docuemnt_transaction_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Docuemnt_Transactions"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Docuemnt_Transactions",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Docuemnt_Transactions)",
+    "Name": "crd1e_docuemnt_transaction_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Docuemnt_Transactions"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Docuemnt_Transactions",
+    "Type": "OptionSetInfo"
+  }
+]

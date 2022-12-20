@@ -1,0 +1,392 @@
+AssignView_DC As screen:
+    OnVisible: |-
+        =NewForm(Form3);
+        
+        Set(pdfData,GetDataURI.Run(Gallery1.Selected.DocumentNumber,Dropdown1_8.SelectedText.AttachmentName));
+
+    Container1 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(240, 243, 248, 1)
+        Height: =623
+        Width: =604
+        Y: =145
+        ZIndex: =8
+
+        Label3_3 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Text: |-
+                ="Vendor Id: "
+            X: =11
+            Y: =226
+            ZIndex: =1
+
+        Label3_1 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Text: |-
+                ="Bussiness Unit: "
+            X: =11
+            Y: =97
+            ZIndex: =3
+
+        Label3_2 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Text: |-
+                ="Legal Entity: "
+            X: =11
+            Y: =156
+            ZIndex: =4
+
+        Dropdown1_1 As dropdown:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(0, 0, 0, 0)
+            ChevronFill: =RGBA(166, 166, 166, 1)
+            ChevronHoverBackground: =Self.Fill
+            Default: =Gallery1.Selected.BU.'Business Unit'
+            Height: =30
+            Items: ='Power BUS'
+            SelectionColor: =RGBA(166, 166, 166, 1)
+            SelectionFill: =RGBA(0, 0, 0, 0)
+            X: =235
+            Y: =97
+            ZIndex: =7
+
+        Dropdown1_2 As dropdown:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(0, 0, 0, 0)
+            ChevronFill: =RGBA(166, 166, 166, 1)
+            ChevronHoverBackground: =Self.Fill
+            Default: =Gallery1.Selected.'Legal Entity'
+            Height: =30
+            Items: =Filter(AGI_LegalEntities,BU.'Business Unit'=Dropdown1_1.SelectedText.'Business Unit')
+            SelectionColor: =RGBA(166, 166, 166, 1)
+            SelectionFill: =RGBA(0, 0, 0, 0)
+            X: =235
+            Y: =166
+            ZIndex: =8
+
+        Button1 As button:
+            Fill: =RGBA(83, 35, 127, 1)
+            HoverFill: =ColorFade(Self.Fill, -20%)
+            OnSelect: =Navigate(AssignTO_DC,ScreenTransition.Cover)
+            Text: ="Assign To"
+            X: =403
+            Y: =519
+            ZIndex: =9
+
+        Label3_9 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Text: ="Inv.No"
+            X: =11
+            Y: =23
+            ZIndex: =10
+
+        TextInput2_3 As text:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Default: =Gallery1.Selected.Inv_Voucher
+            Font: =Font.'Segoe UI'
+            Height: =30
+            Width: =328
+            X: =235
+            Y: =28
+            ZIndex: =11
+
+        Label3_10 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Text: |-
+                ="Vendor Name:"
+            X: =11
+            Y: =282
+            ZIndex: =12
+
+        TextInput2_4 As text:
+            Default: =LookUp(AGI_Vendors,VendorID=Dropdown1_7.SelectedText.VendorID).VendorName
+            DisplayMode: =DisplayMode.Disabled
+            Font: =Font.'Segoe UI'
+            Height: =30
+            Width: =328
+            X: =235
+            Y: =282
+            ZIndex: =13
+
+        Label3 As label:
+            Height: =36
+            Size: =10
+            Text: ="Share point Link is needed"
+            Width: =428
+            X: =11
+            Y: =577
+            ZIndex: =14
+
+        Label3_11 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Text: |-
+                ="Vendor TRN:"
+            X: =11
+            Y: =342
+            ZIndex: =15
+
+        Dropdown1_6 As dropdown:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(0, 0, 0, 0)
+            ChevronFill: =RGBA(166, 166, 166, 1)
+            ChevronHoverBackground: =Self.Fill
+            Default: =LookUp(AGI_Vendors,VendorID=Dropdown1_7.SelectedText.VendorID).VendorTRN
+            Height: =30
+            Items: =LookUp(AGI_Vendors,VendorID=Dropdown1_7.SelectedText.VendorID)
+            SelectionColor: =RGBA(166, 166, 166, 1)
+            SelectionFill: =RGBA(0, 0, 0, 0)
+            X: =235
+            Y: =347
+            ZIndex: =16
+
+        Button1_13 As button:
+            Fill: =RGBA(83, 35, 127, 1)
+            HoverFill: =ColorFade(Self.Fill, -20%)
+            OnSelect: |-
+                =Patch(DocumentMasters,LookUp(DocumentMasters,DocumentNumber=Gallery1.Selected.DocumentNumber),{
+                    Inv_Voucher:TextInput2_3.Text,
+                    BU:Dropdown1_1.Selected,
+                    'Legal Entity':Dropdown1_2.SelectedText.'Legal Entity',
+                    VendorID:Dropdown1_7.Selected,
+                    Vendor_TRN:Dropdown1_6.SelectedText.VendorTRN   
+                });
+                
+                Notify(Gallery1.Selected.DocumentNumber&" Updated Successfully",NotificationType.Success)
+            Text: ="Save"
+            X: =219
+            Y: =519
+            ZIndex: =17
+
+        Dropdown1_7 As dropdown:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(0, 0, 0, 0)
+            ChevronFill: =RGBA(166, 166, 166, 1)
+            ChevronHoverBackground: =Self.Fill
+            Default: =Gallery1.Selected.VendorID.VendorID
+            Height: =30
+            Items: =AGI_Vendors
+            SelectionColor: =RGBA(166, 166, 166, 1)
+            SelectionFill: =RGBA(0, 0, 0, 0)
+            X: =235
+            Y: =224
+            ZIndex: =18
+
+        Button1_14 As button:
+            Fill: =RGBA(83, 35, 127, 1)
+            HoverFill: =ColorFade(Self.Fill, -20%)
+            OnSelect: =
+            Text: ="Reject"
+            X: =28
+            Y: =519
+            ZIndex: =19
+
+        Form3 As form:
+            DataSource: =AGI_PowerQueue_Attachments
+            Height: =100
+            Visible: =false
+            Width: =604
+            Y: =403
+            ZIndex: =20
+
+            Doc_Attachment_DataCard3 As typedDataCard.fileEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="crd1e_doc_attachment"
+                Default: |-
+                    =If(!IsBlank(ThisItem.Doc_Attachment.FileName), Table({DisplayName: ThisItem.Doc_Attachment.FileName, Value: ThisItem.Doc_Attachment.Value}), Blank())
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@AGI_PowerQueue_Attachments],DataSourceInfo.DisplayName,"crd1e_doc_attachment")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =80
+                Required: =false
+                Update: =DataCardValue10.Attachments
+                Visible: =true
+                Width: =603
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+                DataCardKey10 As label:
+                    AutoHeight: =true
+                    FontWeight: =FontWeight.Semibold
+                    Height: =34
+                    Text: ="Select a file"
+                    Width: =Parent.Width - 400
+                    Wrap: =false
+                    X: =14
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue10 As attachments:
+                    AddAttachmentText: ="Upload file"
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =40
+                    IsInDataCard: =true
+                    Items: =Parent.Default
+                    MaxAttachments: =1
+                    MaxAttachmentsText: =""
+                    NoAttachmentsText: ="There is no file."
+                    PaddingBottom: =5
+                    PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    Tooltip: =
+                    Width: =Parent.Width-20
+                    X: =10
+                    Y: =44
+                    ZIndex: =2
+
+                ErrorMessage7 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue10.Y + DataCardValue10.Height
+                    ZIndex: =3
+
+                StarVisible7 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey10.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey10.Y
+                    ZIndex: =4
+
+        AddMediaWithImage1 As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =21
+
+            UploadedImage1 As image:
+                Height: =49
+                Image: =If(IsBlank(AddMediaButton1.Media), SampleImage, AddMediaButton1.Media)
+                ImagePosition: =ImagePosition.Tile
+                Width: =559
+                X: =10
+                Y: =440
+                ZIndex: =22
+
+            AddMediaButton1 As addMedia:
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =26
+                Size: =15
+                Text: ="Select a file"
+                Width: =488
+                X: =45
+                Y: =451
+                ZIndex: =23
+
+        Label3_12 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =32
+            Text: ="Supporting Document"
+            Width: =191
+            X: =11
+            Y: =408
+            ZIndex: =24
+
+    PdfViewer1 As pdfViewer:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Document: =pdfData.result
+        Fill: =RGBA(0, 0, 0, 0.5)
+        Height: =623
+        OnStateChange: =
+        ShowControls: =true
+        Width: =762
+        X: =604
+        Y: =145
+        ZIndex: =9
+
+    Rectangle1_3 As rectangle:
+        Fill: =RGBA(235, 219, 250, 1)
+        Height: =45
+        Width: =1366
+        Y: =100
+        ZIndex: =10
+
+    Icon1 As icon.ChevronLeft:
+        Height: =30
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Back(ScreenTransition.Cover)
+        Width: =42
+        X: =10
+        Y: =107
+        ZIndex: =11
+
+    Label4 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Size: =15
+        Text: =Gallery1.Selected.DocumentNumber
+        X: =Parent.Width/2 -150
+        Y: =102
+        ZIndex: =12
+
+    Rectangle1_2 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Width: =Parent.Width-250
+        X: =250
+        ZIndex: =13
+
+    Label1_1 As label:
+        FontWeight: =FontWeight.Bold
+        Size: =25
+        Text: ="Power Queue"
+        Width: =300
+        X: =276
+        Y: =30
+        ZIndex: =14
+
+    Image2_1 As image:
+        Fill: =RGBA(255, 255, 255, 1)
+        Image: =logo
+        Width: =250
+        ZIndex: =15
+
+    Rectangle4_1 As rectangle:
+        Fill: =RGBA(0, 0, 0, 1)
+        Width: =1
+        X: =264
+        ZIndex: =16
+
+    Dropdown1_8 As dropdown:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =0
+        ChevronBackground: =RGBA(0, 0, 0, 0)
+        ChevronFill: =RGBA(166, 166, 166, 1)
+        ChevronHoverBackground: =Self.Fill
+        Default: =First(Filter(AGI_PowerQueue_Attachments,DocumentNo=Gallery1.Selected.DocumentNumber)).AttachmentName
+        Height: =30
+        HoverFill: =RGBA(255, 255, 255, 1)
+        Items: =Filter(AGI_PowerQueue_Attachments,DocumentNo=Gallery1.Selected.DocumentNumber)
+        OnSelect: =Set(pdfData,GetDataURI.Run(Gallery1.Selected.DocumentNumber,Dropdown1_8.SelectedText.AttachmentName))
+        PressedFill: =RGBA(0, 0, 0, 0)
+        SelectionColor: =RGBA(166, 166, 166, 1)
+        SelectionFill: =RGBA(0, 0, 0, 0)
+        X: =888
+        Y: =160
+        ZIndex: =17
+

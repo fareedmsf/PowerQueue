@@ -1,0 +1,99 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crd1e_agi_powerqueue_attachmentses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crd1e_agi_powerqueue_attachments",
+    "MaxGetRowsCount": 500,
+    "Name": "AGI_PowerQueue_Attachments",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crd1e_agi_powerqueue_attachments_AsyncOperations": "System Jobs",
+      "crd1e_agi_powerqueue_attachments_BulkDeleteFailures": "Bulk Delete Failures",
+      "crd1e_agi_powerqueue_attachments_FileAttachments": "FileAttachments",
+      "crd1e_agi_powerqueue_attachments_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crd1e_agi_powerqueue_attachments_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crd1e_agi_powerqueue_attachments_ProcessSession": "Process Sessions",
+      "crd1e_agi_powerqueue_attachments_SyncErrors": "Sync Errors",
+      "crd1e_agi_powerqueue_attachmentsid": "AGI_PowerQueue_Attachments",
+      "crd1e_attachmentname": "AttachmentName",
+      "crd1e_doc_attachment": "Doc_Attachment",
+      "crd1e_doc_url": "Doc_URL",
+      "crd1e_name": "DocumentNo",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "AGI_PowerQueue_Attachments",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "AGI_PowerQueue_Attachments (Views)",
+    "Name": "_crd1e_agi_powerqueue_attachments_views",
+    "RelatedEntityName": "AGI_PowerQueue_Attachments",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "019971c6-8c70-465c-a386-3a5108a0e87f": "AGI_PowerQueue_Attachments Lookup View",
+      "16879637-088a-4648-a3d8-58c21f80107e": "AGI_PowerQueue_Attachments Advanced Find View",
+      "570441cf-2f55-4585-923c-820dd45818ad": "Inactive AGI_PowerQueue_Attachments",
+      "851b96ed-a46f-44e6-a4b6-06278acc8b69": "Active AGI_PowerQueue_Attachments",
+      "86b3575a-0d8e-4520-aff3-addb2865680c": "AGI_PowerQueue_Attachments Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (AGI_PowerQueue_Attachments)",
+    "Name": "crd1e_agi_powerqueue_attachments_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "AGI_PowerQueue_Attachments"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "AGI_PowerQueue_Attachments",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (AGI_PowerQueue_Attachments)",
+    "Name": "crd1e_agi_powerqueue_attachments_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "AGI_PowerQueue_Attachments"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "AGI_PowerQueue_Attachments",
+    "Type": "OptionSetInfo"
+  }
+]

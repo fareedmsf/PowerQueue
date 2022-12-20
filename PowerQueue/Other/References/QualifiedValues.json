@@ -1,0 +1,101 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_crd1e_documentcontroller_forms",
+      "Namespace": "DocumentMasters (Forms)",
+      "Values": {
+        "Information": "f145e185-ac83-4490-834c-b4427a8bb1f3"
+      }
+    },
+    {
+      "Kind": "default.cds_crd1e_powerbu_forms",
+      "Namespace": "Power BUS (Forms)",
+      "Values": {
+        "Information": "b203131a-496c-484a-982d-48fc4e423126"
+      }
+    },
+    {
+      "Kind": "default.cds_crd1e_agi_department_forms",
+      "Namespace": "AGI_Departments (Forms)",
+      "Values": {
+        "Information": "9ff75ad5-adbd-4ba7-9441-7fc73eca9da9"
+      }
+    },
+    {
+      "Kind": "default.cds_crd1e_documentreason_forms",
+      "Namespace": "Document Reasons (Forms)",
+      "Values": {
+        "Information": "4211eb6c-7916-4d28-ae74-54f8fe3eec6e"
+      }
+    },
+    {
+      "Kind": "default.cds_crd1e_agi_usermater_forms",
+      "Namespace": "AGI_User Masters (Forms)",
+      "Values": {
+        "Information": "5b94d26e-8cad-4fe0-ac74-e55f42147c31"
+      }
+    },
+    {
+      "Kind": "default.cds_crd1e_agi_vendor_forms",
+      "Namespace": "AGI_Vendors (Forms)",
+      "Values": {
+        "Information": "f1321b7b-a117-4f8b-8c68-b3a32e1b6dd3"
+      }
+    },
+    {
+      "Kind": "default.cds_crd1e_docuemnt_transaction_forms",
+      "Namespace": "Docuemnt_Transactions (Forms)",
+      "Values": {
+        "Information": "a42395fc-c170-45a1-8086-8c6585830aaf"
+      }
+    },
+    {
+      "Kind": "default.cds_crd1e_queue_status_forms",
+      "Namespace": "Queue_Statuses (Forms)",
+      "Values": {
+        "Information": "79a049f0-9c0e-474c-9b67-f45ee04d4bd6"
+      }
+    },
+    {
+      "Kind": "default.cds_crd1e_agi_legalentity_forms",
+      "Namespace": "AGI_LegalEntities (Forms)",
+      "Values": {
+        "Information": "a5523ea3-6cf5-4b15-a22f-f35e989740c7"
+      }
+    },
+    {
+      "Kind": "default.cds_crd1e_agi_powerqueue_attachments_forms",
+      "Namespace": "AGI_PowerQueue_Attachments (Forms)",
+      "Values": {
+        "Information": "0b718e0a-03b8-47ef-854e-cd11102d0e30"
+      }
+    },
+    {
+      "Kind": "default.cds_account_forms",
+      "Namespace": "Accounts (Forms)",
+      "Values": {
+        "Account": "8448b78f-8f42-454e-8e2a-f8196b0419af",
+        "account card": "b028db32-3619-48a5-ac51-cf3f947b0ef3",
+        "Account Card form": "cccff382-2b92-467e-bf1b-3db179512af8",
+        "Account for Interactive experience": "a72c7955-442b-4ea4-9499-b10cd18b4256",
+        "Account Hierarchy Tile Form": "69cff312-cfb6-4289-9631-249ab85d2c62",
+        "Account Quick Create": "c9e7ec2d-efca-4e4c-b3e3-f63c4bba5e4b",
+        "Account Reference Panel": "098ae145-1567-41ec-8398-86dbaac70c9b",
+        "Information": "b053a39a-041a-4356-acef-ddf00182762b",
+        "Social Profiles": "2205c86d-ed88-4a2f-a447-3b86a8781f2e"
+      }
+    },
+    {
+      "Kind": "default.cds_fileattachment_forms",
+      "Namespace": "FileAttachments (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_crd1e_documentcontroller_forms",
+      "Namespace": "DocumentControllers (Forms)",
+      "Values": {
+        "Information": "f145e185-ac83-4490-834c-b4427a8bb1f3"
+      }
+    }
+  ]
+}

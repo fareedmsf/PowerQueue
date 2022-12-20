@@ -1,0 +1,99 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crd1e_powerbus",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crd1e_powerbu",
+    "MaxGetRowsCount": 500,
+    "Name": "Power BUS",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crd1e_businessunit": "Business Unit",
+      "crd1e_crd1e_agi_legalentity_BU_crd1e_powerbu": "AGI_LegalEntities",
+      "crd1e_crd1e_docuemnt_transaction_BussinessUnit_": "Docuemnt_Transactions",
+      "crd1e_crd1e_documentcontroller_BU_crd1e_powerbu": "DocumentMasters",
+      "crd1e_name": "Company Code",
+      "crd1e_powerbu_AsyncOperations": "System Jobs",
+      "crd1e_powerbu_BulkDeleteFailures": "Bulk Delete Failures",
+      "crd1e_powerbu_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crd1e_powerbu_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crd1e_powerbu_ProcessSession": "Process Sessions",
+      "crd1e_powerbu_SyncErrors": "Sync Errors",
+      "crd1e_powerbuid": "Power BU",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Power BUS",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Power BUS (Views)",
+    "Name": "_crd1e_powerbu_views",
+    "RelatedEntityName": "Power BUS",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "142aa824-c1b3-49d9-92a8-978a72f0b02f": "Power BU Lookup View",
+      "3d68f10f-45e7-4972-b697-d7c916c1a7e8": "Power BU Associated View",
+      "89ac1144-3c63-4b9d-b384-1a75bc311414": "Active Power BUS",
+      "d8fd6336-3287-4e99-99dd-8319f5b3c7d6": "Inactive Power BUS",
+      "e15482e3-b164-44d1-ba5e-4ff568423e59": "Power BU Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Status (Power BUS)",
+    "Name": "crd1e_powerbu_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Power BUS"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Power BUS",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Power BUS)",
+    "Name": "crd1e_powerbu_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Power BUS"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Power BUS",
+    "Type": "OptionSetInfo"
+  }
+]

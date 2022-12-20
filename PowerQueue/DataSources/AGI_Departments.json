@@ -1,0 +1,98 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crd1e_agi_departments",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crd1e_agi_department",
+    "MaxGetRowsCount": 500,
+    "Name": "AGI_Departments",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crd1e_agi_department_AsyncOperations": "System Jobs",
+      "crd1e_agi_department_BulkDeleteFailures": "Bulk Delete Failures",
+      "crd1e_agi_department_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crd1e_agi_department_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crd1e_agi_department_ProcessSession": "Process Sessions",
+      "crd1e_agi_department_SyncErrors": "Sync Errors",
+      "crd1e_agi_departmentid": "AGI_Department",
+      "crd1e_crd1e_docuemnt_transaction_Department_crd": "Docuemnt_Transactions",
+      "crd1e_crd1e_documentcontroller_Department_crd1e": "DocumentMasters",
+      "crd1e_departmentname": "Department Name",
+      "crd1e_name": "Department Code",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "AGI_Departments",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "AGI_Departments (Views)",
+    "Name": "_crd1e_agi_department_views",
+    "RelatedEntityName": "AGI_Departments",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "2ca0e8f5-8436-41ed-9fec-83321d37c9e0": "AGI_Department Associated View",
+      "5d5a658e-a3f6-4c5c-a146-b38ea23de796": "AGI_Department Lookup View",
+      "67065a3a-2dc8-41f4-b073-05ed8ba57cec": "Inactive AGI_Departments",
+      "85ad5d38-e8b7-4a7f-bf4e-1564ad4de794": "AGI_Department Advanced Find View",
+      "c8aafb20-470b-435a-8e88-762f2d785ed3": "Active AGI_Departments"
+    }
+  },
+  {
+    "DisplayName": "Status (AGI_Departments)",
+    "Name": "crd1e_agi_department_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "AGI_Departments"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "AGI_Departments",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (AGI_Departments)",
+    "Name": "crd1e_agi_department_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "AGI_Departments"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "AGI_Departments",
+    "Type": "OptionSetInfo"
+  }
+]
