@@ -183,7 +183,11 @@ AssignView_DC As screen:
         Button1_14 As button:
             Fill: =RGBA(83, 35, 127, 1)
             HoverFill: =ColorFade(Self.Fill, -20%)
-            OnSelect: =
+            OnSelect: |
+                =
+                Patch(DocumentMasters,LookUp(DocumentMasters,DocumentNumber=Gallery1.Selected.DocumentNumber),{
+                    'Status (crd1e_status)':"Reject" 
+                });
             Text: ="Reject"
             X: =28
             Y: =519
