@@ -12,7 +12,7 @@
         ZIndex: =1
 
     Label11 As label:
-        Text: ="UserEmail"
+        Text: ="Email"
         X: =259
         Y: =220
         ZIndex: =2
