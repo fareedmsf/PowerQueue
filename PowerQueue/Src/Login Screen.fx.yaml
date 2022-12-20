@@ -12,7 +12,7 @@
         ZIndex: =1
 
     Label11 As label:
-        Text: ="UserName"
+        Text: ="UserEmail"
         X: =259
         Y: =220
         ZIndex: =2
@@ -75,7 +75,7 @@
     Button5 As button:
         Fill: =RGBA(109, 49, 162, 1)
         HoverFill: =ColorFade(Self.Fill, -20%)
-        OnSelect: =If(CountRows(Filter('AGI_User Masters',FirstName=TextInput2.Text,Role=Dropdown1.SelectedText.Value))>=1,Navigate(DocumentController_Landing),Notify("Please check your Details",NotificationType.Information))
+        OnSelect: =If(CountRows(Filter('AGI_User Masters',Email=TextInput2.Text,Role=Dropdown1.SelectedText.Value))>=1,Navigate(DocumentController_Landing),Notify("Please check your Details",NotificationType.Information))
         PressedFill: =Self.Fill
         Text: ="Login"
         X: =512
