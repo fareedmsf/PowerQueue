@@ -54,6 +54,14 @@
           "InvariantPropertyName": "Text",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "\"Change Picture\"",
+          "InvariantPropertyName": "ChangePictureText",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "HasDynamicProperties": false,
@@ -72,6 +80,11 @@
         {
           "Category": "Data",
           "PropertyName": "Text",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "ChangePictureText",
           "RuleProviderType": "Unknown"
         },
         {

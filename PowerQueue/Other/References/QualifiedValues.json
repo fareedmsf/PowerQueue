@@ -1,20 +1,6 @@
 {
   "QualifiedValues": [
     {
-      "Kind": "default.cds_crd1e_documentcontroller_forms",
-      "Namespace": "DocumentMasters (Forms)",
-      "Values": {
-        "Information": "f145e185-ac83-4490-834c-b4427a8bb1f3"
-      }
-    },
-    {
-      "Kind": "default.cds_crd1e_powerbu_forms",
-      "Namespace": "Power BUS (Forms)",
-      "Values": {
-        "Information": "b203131a-496c-484a-982d-48fc4e423126"
-      }
-    },
-    {
       "Kind": "default.cds_crd1e_agi_department_forms",
       "Namespace": "AGI_Departments (Forms)",
       "Values": {
@@ -22,10 +8,17 @@
       }
     },
     {
-      "Kind": "default.cds_crd1e_documentreason_forms",
-      "Namespace": "Document Reasons (Forms)",
+      "Kind": "default.cds_crd1e_agi_legalentity_forms",
+      "Namespace": "AGI_LegalEntities (Forms)",
       "Values": {
-        "Information": "4211eb6c-7916-4d28-ae74-54f8fe3eec6e"
+        "Information": "a5523ea3-6cf5-4b15-a22f-f35e989740c7"
+      }
+    },
+    {
+      "Kind": "default.cds_crd1e_agi_powerqueue_attachments_forms",
+      "Namespace": "AGI_PowerQueue_Attachments (Forms)",
+      "Values": {
+        "Information": "0b718e0a-03b8-47ef-854e-cd11102d0e30"
       }
     },
     {
@@ -50,24 +43,31 @@
       }
     },
     {
+      "Kind": "default.cds_crd1e_documentreason_forms",
+      "Namespace": "Document Reasons (Forms)",
+      "Values": {
+        "Information": "4211eb6c-7916-4d28-ae74-54f8fe3eec6e"
+      }
+    },
+    {
+      "Kind": "default.cds_crd1e_documentcontroller_forms",
+      "Namespace": "DocumentMasters (Forms)",
+      "Values": {
+        "Information": "f145e185-ac83-4490-834c-b4427a8bb1f3"
+      }
+    },
+    {
+      "Kind": "default.cds_crd1e_powerbu_forms",
+      "Namespace": "Power BUS (Forms)",
+      "Values": {
+        "Information": "b203131a-496c-484a-982d-48fc4e423126"
+      }
+    },
+    {
       "Kind": "default.cds_crd1e_queue_status_forms",
       "Namespace": "Queue_Statuses (Forms)",
       "Values": {
         "Information": "79a049f0-9c0e-474c-9b67-f45ee04d4bd6"
-      }
-    },
-    {
-      "Kind": "default.cds_crd1e_agi_legalentity_forms",
-      "Namespace": "AGI_LegalEntities (Forms)",
-      "Values": {
-        "Information": "a5523ea3-6cf5-4b15-a22f-f35e989740c7"
-      }
-    },
-    {
-      "Kind": "default.cds_crd1e_agi_powerqueue_attachments_forms",
-      "Namespace": "AGI_PowerQueue_Attachments (Forms)",
-      "Values": {
-        "Information": "0b718e0a-03b8-47ef-854e-cd11102d0e30"
       }
     },
     {
