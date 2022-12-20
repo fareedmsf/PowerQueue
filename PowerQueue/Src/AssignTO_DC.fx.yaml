@@ -4,10 +4,7 @@ AssignTO_DC As screen:
 
     "Gallery1_1 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
         Height: =490
-        Items: |-
-            =With({records:'AGI_User Masters'},
-                ForAll(Sequence(CountRows(records)), Patch(Last(FirstN(records,Value)), {rowNumber:Value}))
-            )
+        Items: =Search(Filter('AGI_User Masters',BusinessUnit=ComboBox1_3.Selected.'Business Unit',LegalEntity=ComboBox1_4.Selected.'Legal Entity'),TextInput1_1.Text,"crd1e_businessunit","crd1e_email","crd1e_firstname","crd1e_role","crd1e_userid")
         Layout: =Layout.Vertical
         OnSelect: =Navigate(AssignView_DC,ScreenTransition.Cover)
         TemplateFill: =If(Mod(ThisItem.rowNumber,2),RGBA(255, 255, 255, 1),RGBA(240, 243, 248,1))
@@ -322,11 +319,15 @@ AssignTO_DC As screen:
         ChevronBackground: =RGBA(0, 0, 0, 0)
         ChevronFill: =RGBA(166, 166, 166, 1)
         ChevronHoverBackground: =Self.Fill
+        DefaultSelectedItems: =Dropdown1_1
+        DisplayFields: =["crd1e_businessunit"]
         HoverBorderColor: =Self.Fill
-        Items: =ComboBoxSample
-        SearchItems: =Search(ComboBoxSample,ComboBox1_3.SearchText,"Value1")
+        Items: ='Power BUS'
+        SearchFields: =["crd1e_businessunit"]
+        SearchItems: =Search('Power BUS',ComboBox1_3.SearchText,"crd1e_businessunit")
         SelectionColor: =RGBA(166, 166, 166, 1)
         SelectionFill: =RGBA(0, 0, 0, 0)
+        SelectMultiple: =false
         Width: =350
         X: =20
         Y: =134
@@ -338,12 +339,14 @@ AssignTO_DC As screen:
         ChevronBackground: =RGBA(0, 0, 0, 0)
         ChevronFill: =RGBA(166, 166, 166, 1)
         ChevronHoverBackground: =Self.Fill
-        DisplayFields: =["crd1e_statusname"]
+        DefaultSelectedItems: =Dropdown1_2
+        DisplayFields: =["crd1e_name"]
         HoverBorderColor: =Self.Fill
-        Items: =Queue_Statuses
+        IsSearchable: =false
+        Items: =AGI_LegalEntities
         PressedFill: =RGBA(166, 166, 166, 1)
         SearchFields: =["crd1e_name"]
-        SearchItems: =Search(Queue_Statuses,ComboBox1_4.SearchText,"crd1e_name")
+        SearchItems: =[]
         SelectionColor: =RGBA(166, 166, 166, 1)
         SelectionFill: =RGBA(0, 0, 0, 0)
         Width: =350
@@ -358,7 +361,7 @@ AssignTO_DC As screen:
         ZIndex: =23
 
     Label2_7 As label:
-        Text: ="Department"
+        Text: ="Legal Entity"
         X: =498
         Y: =100
         ZIndex: =24

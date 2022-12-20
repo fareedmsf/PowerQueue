@@ -5,10 +5,8 @@ DocumentController_Landing As screen:
 
     "Gallery1 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
         Height: =444
-        Items: |-
-            =Filter(DocumentMasters, UploadedOn>=DatePicker1.SelectedDate,UploadedOn<=DatePicker1_1.SelectedDate,BU.'Business Unit'='BU Dropdown'.SelectedText.'Business Unit','Status (crd1e_status)'= ComboBox1_2.Selected.'Status Name')
-            //Documents
-            //DocumentMastersBU.'Business Unit'=ComboBox1.Selected.'Business Unit' ,'Status (crd1e_status)'=ComboBox1_2.Selected.'Status Name',VendorID.VendorID=ComboBox1_1.Selected.VendorID
+        Items: |
+            =Filter(DocumentMasters, UploadedOn>=DatePicker1.SelectedDate,UploadedOn<=DatePicker1_1.SelectedDate,BU.'Business Unit'=ComboBox1.Selected.'Business Unit','Status (crd1e_status)'= ComboBox1_2.Selected.'Status Name')
         Layout: =Layout.Vertical
         OnSelect: =Navigate(AssignView_DC,ScreenTransition.Cover)
         ShowScrollbar: =false
@@ -140,7 +138,7 @@ DocumentController_Landing As screen:
 
         Image3 As image:
             Height: =56
-            Image: ='Group 64'
+            Image: =ThisItem.'File Link'
             OnSelect: =Navigate(AssignView_DC,ScreenTransition.Cover)
             Visible: =false
             Width: =81
@@ -267,17 +265,17 @@ DocumentController_Landing As screen:
         ChevronBackground: =RGBA(0, 0, 0, 0)
         ChevronFill: =RGBA(166, 166, 166, 1)
         ChevronHoverBackground: =Self.Fill
-        DefaultSelectedItems: ='BU Dropdown'
+        DefaultSelectedItems: =LookUp('Power BUS','Business Unit'= 'BU Dropdown'.SelectedText.'Business Unit')
         DisplayFields: =["crd1e_businessunit"]
         HoverBorderColor: =Self.Fill
-        IsSearchable: =false
         Items: ='Power BUS'
         OnSelect: |-
             =//UpdateContext({Documents:Filter(DocumentMasters,BU.'Business Unit'=ComboBox1.Selected.'Business Unit')})
         SearchFields: =["crd1e_businessunit"]
-        SearchItems: =[]
+        SearchItems: =Search('Power BUS',ComboBox1.SearchText,"crd1e_businessunit")
         SelectionColor: =RGBA(166, 166, 166, 1)
         SelectionFill: =RGBA(0, 0, 0, 0)
+        SelectMultiple: =false
         Width: =210
         X: =354
         Y: =136
