@@ -1,8 +1,5 @@
 AssignView_DC As screen:
-    OnVisible: |-
-        =
-        
-        Set(pdfData,GetDataURI.Run(Gallery1.Selected.DocumentNumber,Dropdown1_8.SelectedText.AttachmentName));
+    OnVisible: =Set(pdfData,GetDataURI.Run(Gallery1.Selected.Name,Gallery1.Selected.'File Name'));
 
     Container1 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(240, 243, 248, 1)
@@ -73,6 +70,7 @@ AssignView_DC As screen:
             HoverFill: =ColorFade(Self.Fill, -20%)
             OnSelect: =Navigate(AssignTO_DC,ScreenTransition.Cover)
             Text: ="Assign To"
+            Visible: =false
             X: =403
             Y: =519
             ZIndex: =6
@@ -114,15 +112,6 @@ AssignView_DC As screen:
             Y: =282
             ZIndex: =10
 
-        Label3 As label:
-            Height: =36
-            Size: =10
-            Text: ="Share point Link is needed"
-            Width: =428
-            X: =11
-            Y: =577
-            ZIndex: =11
-
         Label3_11 As label:
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
@@ -151,7 +140,7 @@ AssignView_DC As screen:
             Fill: =RGBA(83, 35, 127, 1)
             HoverFill: =ColorFade(Self.Fill, -20%)
             OnSelect: |-
-                =Patch(DocumentMasters,LookUp(DocumentMasters,DocumentNumber=Gallery1.Selected.DocumentNumber),{
+                =Patch(DocumentMasters,LookUp(DocumentMasters,DocumentNumber=Gallery1.Selected.Name),{
                     Inv_Voucher:TextInput2_3.Text,
                     BU:Dropdown1_1.Selected,
                     'Legal Entity':Dropdown1_2.SelectedText.'Legal Entity',
@@ -165,7 +154,7 @@ AssignView_DC As screen:
                 ForAll(
                     DataCardValue8.Attachments,
                     CreateSupportingDocument.Run(
-                        Gallery1.Selected.DocumentNumber,
+                        Gallery1.Selected.Name,
                 {
                 file:{
                     contentBytes:Value,
@@ -177,8 +166,8 @@ AssignView_DC As screen:
                 Reset(DataCardValue8);
                 
                 Notify(Gallery1.Selected.DocumentNumber&" Updated Successfully",NotificationType.Success)
-            Text: ="Save"
-            X: =219
+            Text: ="Submit"
+            X: =309
             Y: =519
             ZIndex: =14
 
@@ -206,7 +195,7 @@ AssignView_DC As screen:
                     'Status (crd1e_status)':"Cancelled" 
                 });
             Text: ="Reject"
-            X: =28
+            X: =118
             Y: =519
             ZIndex: =16
 
@@ -221,10 +210,10 @@ AssignView_DC As screen:
             ZIndex: =19
 
         Icon4 As icon.AddDocument:
-            Height: =45
+            Height: =40
             Icon: =Icon.AddDocument
             OnSelect: =Select(DataCardValue8)
-            Width: =52
+            Width: =40
             X: =499
             Y: =440
             ZIndex: =20
@@ -324,7 +313,7 @@ AssignView_DC As screen:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
         Size: =15
-        Text: =Gallery1.Selected.DocumentNumber
+        Text: =Gallery1.Selected.Name
         X: =Parent.Width/2 -150
         Y: =102
         ZIndex: =5
@@ -366,12 +355,21 @@ AssignView_DC As screen:
         Default: =First(Filter(AGI_PowerQueue_Attachments,DocumentNo=Gallery1.Selected.DocumentNumber)).AttachmentName
         Height: =30
         HoverFill: =RGBA(255, 255, 255, 1)
-        Items: =Filter(AGI_PowerQueue_Attachments,DocumentNo=Gallery1.Selected.DocumentNumber)
-        OnSelect: =Set(pdfData,GetDataURI.Run(Gallery1.Selected.DocumentNumber,Dropdown1_8.SelectedText.AttachmentName))
+        Items: =Filter(AGI_PowerQueue_Attachments,DocumentNo=Gallery1.Selected.Name)
+        OnSelect: =Set(pdfData,GetDataURI.Run(Gallery1.Selected.Name,Dropdown1_8.SelectedText.AttachmentName))
         PressedFill: =RGBA(0, 0, 0, 0)
         SelectionColor: =RGBA(166, 166, 166, 1)
         SelectionFill: =RGBA(0, 0, 0, 0)
         X: =888
         Y: =160
         ZIndex: =10
+
+    Image1 As image:
+        Height: =30
+        Image: ='Group 66'
+        OnSelect: =Launch(Dropdown1_8.SelectedText.Doc_URL)
+        Width: =30
+        X: =1224
+        Y: =160
+        ZIndex: =11
 

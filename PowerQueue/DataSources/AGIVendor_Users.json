@@ -1,0 +1,99 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crd1e_agivendor_users",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crd1e_agivendor_user",
+    "MaxGetRowsCount": 500,
+    "Name": "AGIVendor_Users",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crd1e_agivendor_user_AsyncOperations": "System Jobs",
+      "crd1e_agivendor_user_BulkDeleteFailures": "Bulk Delete Failures",
+      "crd1e_agivendor_user_DuplicateBaseRecord": "Duplicate Records (crd1e_agivendor_user_DuplicateBaseRecord)",
+      "crd1e_agivendor_user_DuplicateMatchingRecord": "Duplicate Records (crd1e_agivendor_user_DuplicateMatchingRecord)",
+      "crd1e_agivendor_user_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crd1e_agivendor_user_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crd1e_agivendor_user_ProcessSession": "Process Sessions",
+      "crd1e_agivendor_user_SyncErrors": "Sync Errors",
+      "crd1e_agivendor_userid": "AGIVendor_User",
+      "crd1e_User": "User",
+      "crd1e_Vendor": "Vendor",
+      "crd1e_vendoruserid": "VendorUserId",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "AGIVendor_Users",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "AGIVendor_Users (Views)",
+    "Name": "_crd1e_agivendor_user_views",
+    "RelatedEntityName": "AGIVendor_Users",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "0359747a-335b-481e-a71c-d91463d1bba9": "AGIVendor_User Associated View",
+      "3a15d1f0-f7a5-45e3-b9d2-01b724aaf41c": "Active AGIVendor_Users",
+      "557278af-1da4-4267-a7e1-75180e08a915": "AGIVendor_User Advanced Find View",
+      "5e46f1d0-8c8b-472c-9b80-b85f1232583f": "Inactive AGIVendor_Users",
+      "c7d4cc0a-7757-408e-998b-83d1acbbfb85": "AGIVendor_User Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (AGIVendor_Users)",
+    "Name": "crd1e_agivendor_user_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "AGIVendor_Users"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "AGIVendor_Users",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (AGIVendor_Users)",
+    "Name": "crd1e_agivendor_user_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "AGIVendor_Users"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "AGIVendor_Users",
+    "Type": "OptionSetInfo"
+  }
+]

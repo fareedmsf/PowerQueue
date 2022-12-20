@@ -6,7 +6,8 @@ DocumentController_Landing As screen:
     "Gallery1 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
         Height: =444
         Items: |
-            =Filter(DocumentMasters, UploadedOn>=DatePicker1.SelectedDate,UploadedOn<=DatePicker1_1.SelectedDate,BU.'Business Unit'=ComboBox1.Selected.'Business Unit','Status (crd1e_status)'= ComboBox1_2.Selected.'Status Name')
+            =//Filter(DocumentMasters, UploadedOn>=DatePicker1.SelectedDate,UploadedOn<=DatePicker1_1.SelectedDate,BU.'Business Unit'=ComboBox1.Selected.'Business Unit','Status (crd1e_status)'= ComboBox1_2.Selected.'Status Name')
+            Filter(DocumentMasters,UploadedOn>=DatePicker1.SelectedDate,UploadedOn<=DatePicker1_1.SelectedDate,'Status (crd1e_status)'= ComboBox1_2.Selected.'Status Name')
         Layout: =Layout.Vertical
         OnSelect: =Navigate(AssignView_DC,ScreenTransition.Cover)
         ShowScrollbar: =false
@@ -27,7 +28,7 @@ DocumentController_Landing As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =10
-            Text: =ThisItem.DocumentNumber
+            Text: =ThisItem.Name
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth/9
             X: =Title2_3.X

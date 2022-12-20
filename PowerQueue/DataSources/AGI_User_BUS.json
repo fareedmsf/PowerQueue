@@ -1,0 +1,99 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crd1e_agi_user_bus",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crd1e_agi_user_bu",
+    "MaxGetRowsCount": 500,
+    "Name": "AGI_User_BUS",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crd1e_agi_user_bu_AsyncOperations": "System Jobs",
+      "crd1e_agi_user_bu_BulkDeleteFailures": "Bulk Delete Failures",
+      "crd1e_agi_user_bu_DuplicateBaseRecord": "Duplicate Records (crd1e_agi_user_bu_DuplicateBaseRecord)",
+      "crd1e_agi_user_bu_DuplicateMatchingRecord": "Duplicate Records (crd1e_agi_user_bu_DuplicateMatchingRecord)",
+      "crd1e_agi_user_bu_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crd1e_agi_user_bu_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crd1e_agi_user_bu_ProcessSession": "Process Sessions",
+      "crd1e_agi_user_bu_SyncErrors": "Sync Errors",
+      "crd1e_agi_user_buid": "AGI_User_BU",
+      "crd1e_agiuserbuid": "AGIUserBUId",
+      "crd1e_BU": "BU",
+      "crd1e_User": "User",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "AGI_User_BUS",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "AGI_User_BUS (Views)",
+    "Name": "_crd1e_agi_user_bu_views",
+    "RelatedEntityName": "AGI_User_BUS",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "0dc0dfc4-98c0-4963-ac2c-a434c75fd108": "AGI_User_BU Advanced Find View",
+      "a782331d-8847-4632-87d4-eb9e451ed70c": "Active AGI_User_BUS",
+      "e48b3ab8-dc7d-4b3f-ba0e-9b2fbf0799cd": "AGI_User_BU Lookup View",
+      "f3677a3c-f507-42dc-9d95-b4a286c997e1": "Inactive AGI_User_BUS",
+      "f742209b-2048-43de-93b4-b1cf151bd352": "AGI_User_BU Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (AGI_User_BUS)",
+    "Name": "crd1e_agi_user_bu_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "AGI_User_BUS"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "AGI_User_BUS",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (AGI_User_BUS)",
+    "Name": "crd1e_agi_user_bu_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "AGI_User_BUS"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "AGI_User_BUS",
+    "Type": "OptionSetInfo"
+  }
+]

@@ -4,7 +4,22 @@ AssignTO_DC As screen:
 
     "Gallery1_1 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
         Height: =490
-        Items: =Search(Filter('AGI_User Masters',BusinessUnit=ComboBox1_3.Selected.'Business Unit',LegalEntity=ComboBox1_4.Selected.'Legal Entity'),TextInput1_1.Text,"crd1e_businessunit","crd1e_email","crd1e_firstname","crd1e_role","crd1e_userid")
+        Items: |-
+            =//Search(Filter('AGI_User Masters',BusinessUnit=ComboBox1_3.Selected.'Business Unit',LegalEntity=ComboBox1_4.Selected.'Legal Entity'),TextInput1_1.Text,"crd1e_businessunit","crd1e_email","crd1e_firstname","crd1e_role","crd1e_userid")
+            If(
+                    CountRows(
+                        Filter(
+                            AGIVendor_Users,
+                            Vendor.VendorID = Dropdown1_7.SelectedText.VendorID
+                        )
+                    )>=1
+               ,
+                Filter(
+                    AGIVendor_Users,
+                    Vendor.VendorID = Dropdown1_7.SelectedText.VendorID
+                ) ,
+                Filter(AGI_User_LegalEntities,BU.'Business Unit'=Dropdown1_1.SelectedText.'Business Unit',LegalEntity.'Legal Entity'=Dropdown1_2.Selected.'Legal Entity')
+            )
         Layout: =Layout.Vertical
         OnSelect: =Navigate(AssignView_DC,ScreenTransition.Cover)
         TemplateFill: =If(Mod(ThisItem.rowNumber,2),RGBA(255, 255, 255, 1),RGBA(240, 243, 248,1))
@@ -24,7 +39,7 @@ AssignTO_DC As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =10
-            Text: =ThisItem.UserID
+            Text: =ThisItem.crd1e_User.UserID
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth/9
             X: =43
@@ -41,7 +56,7 @@ AssignTO_DC As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =10
-            Text: =ThisItem.FirstName &" "&ThisItem.LastName
+            Text: =LookUp('AGI_User Masters',UserID=ThisItem.crd1e_User.UserID).FirstName
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth/9
             X: =225
@@ -58,7 +73,7 @@ AssignTO_DC As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =10
-            Text: =ThisItem.BusinessUnit
+            Text: =LookUp('AGI_User Masters',UserID=ThisItem.crd1e_User.UserID).Throughput
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth/9
             X: =451
@@ -75,7 +90,7 @@ AssignTO_DC As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =10
-            Text: =CountRows(Filter(Docuemnt_Transactions,AssignedTo.Email=ThisItem.Email,DocumentStatus="New"))
+            Text: =CountRows(Filter(Docuemnt_Transactions,AssignedTo.Email=LookUp('AGI_User Masters',UserID=ThisItem.crd1e_User.UserID).Email,DocumentStatus="New"))
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth/9
             X: =713
@@ -103,7 +118,7 @@ AssignTO_DC As screen:
             Fill: =RGBA(83, 35, 120, 1)
             Height: =30
             OnSelect: |-
-                =Patch(Docuemnt_Transactions,{
+                =/*Patch(Docuemnt_Transactions,{
                     InvoiceNo:TextInput2_3.Text,
                     'Bussiness Unit':Dropdown1_1.Selected,
                     'Legal Entity':Dropdown1_2.Selected.'Legal Entity',
@@ -128,7 +143,7 @@ AssignTO_DC As screen:
                 
                 
                 
-                Navigate(AssignTO_DC,ScreenTransition.Fade)
+                Navigate(AssignTO_DC,ScreenTransition.Fade)*/
             Size: =12
             Text: ="Assign"
             Width: =80
@@ -146,7 +161,7 @@ AssignTO_DC As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =10
-            Text: =CountRows(Filter(Docuemnt_Transactions,AssignedTo.Email=ThisItem.Email,DocumentStatus="In Progress"))
+            Text: =CountRows(Filter(Docuemnt_Transactions,AssignedTo.Email=LookUp('AGI_User Masters',UserID=ThisItem.crd1e_User.UserID).Email,DocumentStatus="In Progress"))
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth/9
             X: =945
@@ -205,7 +220,7 @@ AssignTO_DC As screen:
         PaddingRight: =0
         PaddingTop: =0
         Size: =12
-        Text: ="Business Unit"
+        Text: ="ThroughPut"
         VerticalAlign: =VerticalAlign.Top
         X: =465
         Y: =230
@@ -256,7 +271,7 @@ AssignTO_DC As screen:
         PaddingRight: =0
         PaddingTop: =0
         Size: =12
-        Text: ="Load"
+        Text: ="Bandwidth"
         VerticalAlign: =VerticalAlign.Top
         X: =1105
         Y: =230
@@ -343,7 +358,7 @@ AssignTO_DC As screen:
         DisplayFields: =["crd1e_name"]
         HoverBorderColor: =Self.Fill
         IsSearchable: =false
-        Items: =AGI_LegalEntities
+        Items: =Filter(AGI_LegalEntities,BU.'Business Unit'=ComboBox1_3.Selected.'Business Unit')
         PressedFill: =RGBA(166, 166, 166, 1)
         SearchFields: =["crd1e_name"]
         SearchItems: =[]
