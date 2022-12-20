@@ -12,6 +12,8 @@
       "_ownerid_value": "Owner",
       "crd1e_businessunit": "Business Unit",
       "crd1e_crd1e_agi_legalentity_BU_crd1e_powerbu": "AGI_LegalEntities",
+      "crd1e_crd1e_agi_user_bu_BU_crd1e_powerbu": "AGI_User_BUS",
+      "crd1e_crd1e_agi_user_legalentity_BU_crd1e_power": "AGI_User_LegalEntities",
       "crd1e_crd1e_docuemnt_transaction_BussinessUnit_": "Docuemnt_Transactions",
       "crd1e_crd1e_documentcontroller_BU_crd1e_powerbu": "DocumentMasters",
       "crd1e_name": "Company Code",

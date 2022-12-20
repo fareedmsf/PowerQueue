@@ -20,6 +20,7 @@
       "crd1e_agi_vendor_ProcessSession": "Process Sessions",
       "crd1e_agi_vendor_SyncErrors": "Sync Errors",
       "crd1e_agi_vendorid": "AGI_Vendor",
+      "crd1e_crd1e_agivendor_user_Vendor_crd1e_agi_ven": "AGIVendor_Users",
       "crd1e_crd1e_docuemnt_transaction_VendorName_crd": "Docuemnt_Transactions",
       "crd1e_crd1e_documentcontroller_VendorName_crd1e": "DocumentMasters",
       "crd1e_name": "Name",

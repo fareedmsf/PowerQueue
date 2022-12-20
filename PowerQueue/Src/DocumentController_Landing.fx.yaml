@@ -265,7 +265,7 @@ DocumentController_Landing As screen:
         ChevronBackground: =RGBA(0, 0, 0, 0)
         ChevronFill: =RGBA(166, 166, 166, 1)
         ChevronHoverBackground: =Self.Fill
-        DefaultSelectedItems: =LookUp('Power BUS','Business Unit'= 'BU Dropdown'.SelectedText.'Business Unit')
+        DefaultSelectedItems: =//LookUp('Power BUS','Business Unit'= 'BU Dropdown'.SelectedText.'Business Unit')
         DisplayFields: =["crd1e_businessunit"]
         HoverBorderColor: =Self.Fill
         Items: ='Power BUS'

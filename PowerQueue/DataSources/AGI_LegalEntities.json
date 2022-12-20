@@ -18,6 +18,7 @@
       "crd1e_agi_legalentity_SyncErrors": "Sync Errors",
       "crd1e_agi_legalentityid": "AGI_LegalEntity",
       "crd1e_BU": "BU",
+      "crd1e_crd1e_agi_user_legalentity_LegalEntity_cr": "AGI_User_LegalEntities",
       "crd1e_legalentity": "Legal Entity",
       "crd1e_name": "Name",
       "createdby": "Created By",
