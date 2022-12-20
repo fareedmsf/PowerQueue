@@ -1,0 +1,84 @@
+"'Login Screen' As screen":
+
+    Label10 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =64
+        Size: =40
+        Text: ="Login"
+        Width: =356
+        X: =156
+        Y: =129
+        ZIndex: =1
+
+    Label11 As label:
+        Text: ="UserName"
+        X: =259
+        Y: =220
+        ZIndex: =2
+
+    Label12 As label:
+        Text: ="Role"
+        X: =259
+        Y: =284
+        ZIndex: =3
+
+    Label13 As label:
+        Text: ="ERP"
+        X: =259
+        Y: =340
+        ZIndex: =4
+
+    Label14 As label:
+        Text: ="Business Unit"
+        X: =259
+        Y: =402
+        ZIndex: =5
+
+    Label15 As label:
+        Text: ="Legal Entity"
+        X: =259
+        Y: =456
+        ZIndex: =6
+
+    TextInput2 As text:
+        BorderColor: =RGBA(237, 237, 237, 1)
+        Default: =""
+        X: =556
+        Y: =220
+        ZIndex: =7
+
+    Dropdown1 As dropdown:
+        Items: =Distinct('AGI_User Masters',Role)
+        X: =556
+        Y: =280
+        ZIndex: =8
+
+    Dropdown3 As dropdown:
+        Items: =DropDownSample
+        X: =556
+        Y: =334
+        ZIndex: =9
+
+    "'BU Dropdown' As dropdown":
+        Items: ='Power BUS'
+        X: =556
+        Y: =390
+        ZIndex: =10
+
+    "'LE Dropdown' As dropdown":
+        Items: =Filter(AGI_LegalEntities,BU.'Business Unit'='BU Dropdown'.SelectedText.'Business Unit')
+        X: =556
+        Y: =456
+        ZIndex: =11
+
+    Button5 As button:
+        Fill: =RGBA(109, 49, 162, 1)
+        HoverFill: =ColorFade(Self.Fill, -20%)
+        OnSelect: =If(CountRows(Filter('AGI_User Masters',FirstName=TextInput2.Text,Role=Dropdown1.SelectedText.Value))>=1,Navigate(DocumentController_Landing),Notify("Please check your Details",NotificationType.Information))
+        PressedFill: =Self.Fill
+        Text: ="Login"
+        X: =512
+        Y: =592
+        ZIndex: =12
+

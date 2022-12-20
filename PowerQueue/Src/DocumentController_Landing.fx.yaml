@@ -267,6 +267,7 @@ DocumentController_Landing As screen:
         ChevronBackground: =RGBA(0, 0, 0, 0)
         ChevronFill: =RGBA(166, 166, 166, 1)
         ChevronHoverBackground: =Self.Fill
+        DefaultSelectedItems: =First('Power BUS')
         DisplayFields: =["crd1e_businessunit"]
         HoverBorderColor: =Self.Fill
         IsSearchable: =false
@@ -465,6 +466,7 @@ DocumentController_Landing As screen:
         ChevronBackground: =RGBA(0, 0, 0, 0)
         ChevronFill: =RGBA(166, 166, 166, 1)
         ChevronHoverBackground: =Self.Fill
+        DefaultSelectedItems: =LookUp(Queue_Statuses,'Status Name'="Draft")
         DisplayFields: =["crd1e_statusname"]
         Items: =Queue_Statuses
         OnSelect: |-
