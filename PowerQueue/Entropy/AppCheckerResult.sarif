@@ -254,86 +254,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "AssignTO_DC.Gallery1_1.galleryTemplate1_1.TemplateFill"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "AssignTO_DC.Gallery1_1.galleryTemplate1_1.TemplateFill",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 10,
-                  "charOffset": 15,
-                  "snippet": {
-                    "text": ".rowNumber"
-                  }
-                }
-              },
-              "properties": {
-                "member": "TemplateFill",
-                "module": "AssignTO_DC",
-                "type": "AssignTO_DC.Gallery1_1.galleryTemplate1_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "rowNumber"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "AssignTO_DC.Gallery1_1.galleryTemplate1_1.TemplateFill"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "AssignTO_DC.Gallery1_1.galleryTemplate1_1.TemplateFill",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 25,
-                  "charOffset": 3,
-                  "snippet": {
-                    "text": "Mod(ThisItem.rowNumber,2)"
-                  }
-                }
-              },
-              "properties": {
-                "member": "TemplateFill",
-                "module": "AssignTO_DC",
-                "type": "AssignTO_DC.Gallery1_1.galleryTemplate1_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Mod"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'BU Add'.TextInputVendorID_3.AccessibleLabel"
                 }
               ],
@@ -3724,6 +3644,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "DocumentController_Landing.Gallery1.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocumentController_Landing.Gallery1.Items",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "DocumentController_Landing",
+                "type": "DocumentController_Landing.Gallery1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Processor_Landing.Documents"
                 }
               ],
@@ -3857,66 +3807,6 @@
                 "member": "Default",
                 "module": "Vendor Edit",
                 "type": "'Vendor Edit'.CheckboxActive"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "AssignTO_DC.ComboBox1_3.DefaultSelectedItems"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "AssignTO_DC.ComboBox1_3.DefaultSelectedItems",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "DefaultSelectedItems",
-                "module": "AssignTO_DC",
-                "type": "AssignTO_DC.ComboBox1_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "AssignTO_DC.ComboBox1_4.DefaultSelectedItems"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "AssignTO_DC.ComboBox1_4.DefaultSelectedItems",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "DefaultSelectedItems",
-                "module": "AssignTO_DC",
-                "type": "AssignTO_DC.ComboBox1_4"
               }
             }
           ],

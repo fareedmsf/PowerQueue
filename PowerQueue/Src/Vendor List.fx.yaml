@@ -181,3 +181,20 @@
         X: =264
         ZIndex: =15
 
+    Button9 As button:
+        BorderColor: =RGBA(83, 35, 127, 1)
+        Color: =RGBA(83, 25, 127, 1)
+        Fill: =RGBA(235, 215, 250, 1)
+        FontWeight: =FontWeight.Bold
+        HoverColor: =RGBA(83, 35, 127, 0.51)
+        HoverFill: =RGBA(235, 215, 250, 0.5)
+        OnSelect: =Navigate('Add Vendor')
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Text: ="Add Vendor"
+        X: =1166
+        Y: =30
+        ZIndex: =16
+

@@ -28,7 +28,7 @@
 
     TextInputVendorID_1 As text:
         BorderColor: =RGBA(0, 0, 0, 1)
-        Default: ="Text input"
+        Default: =""
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         X: =598
@@ -37,7 +37,7 @@
 
     TextInputVendorName_1 As text:
         BorderColor: =RGBA(0, 0, 0, 1)
-        Default: ="Text input"
+        Default: =""
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         X: =598
@@ -46,7 +46,7 @@
 
     TextInputLastVendorTRN_1 As text:
         BorderColor: =RGBA(0, 0, 0, 1)
-        Default: ="Text input"
+        Default: =""
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         X: =598
@@ -76,6 +76,8 @@
         Font: =Font.'Segoe UI'
         Height: =50
         HoverFill: =ColorFade(RGBA(83, 35, 127, 1), -20%)
+        OnSelect: |-
+            =Patch(AGI_Vendors,Defaults(AGI_Vendors),{VendorID:TextInputVendorID_1})
         RadiusBottomLeft: =50
         RadiusBottomRight: =50
         RadiusTopLeft: =50
