@@ -61,6 +61,7 @@
         ZIndex: =9
 
     "'BU Dropdown' As dropdown":
+        Default: =First('Power BUS').'Business Unit'
         Items: ='Power BUS'
         X: =556
         Y: =390

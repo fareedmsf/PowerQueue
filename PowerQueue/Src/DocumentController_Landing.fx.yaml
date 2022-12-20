@@ -6,7 +6,7 @@ DocumentController_Landing As screen:
     "Gallery1 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
         Height: =444
         Items: |-
-            =Filter(DocumentMasters, UploadedOn>=DatePicker1.SelectedDate,UploadedOn<=DatePicker1_1.SelectedDate )
+            =Filter(DocumentMasters, UploadedOn>=DatePicker1.SelectedDate,UploadedOn<=DatePicker1_1.SelectedDate,BU.'Business Unit'='BU Dropdown'.SelectedText.'Business Unit','Status (crd1e_status)'= ComboBox1_2.Selected.'Status Name')
             //Documents
             //DocumentMastersBU.'Business Unit'=ComboBox1.Selected.'Business Unit' ,'Status (crd1e_status)'=ComboBox1_2.Selected.'Status Name',VendorID.VendorID=ComboBox1_1.Selected.VendorID
         Layout: =Layout.Vertical
