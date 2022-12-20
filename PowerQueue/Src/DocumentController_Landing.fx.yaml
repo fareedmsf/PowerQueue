@@ -528,3 +528,9 @@ DocumentController_Landing As screen:
         Y: =38
         ZIndex: =29
 
+    Label10 As label:
+        Text: ="Text"
+        X: =824
+        Y: =30
+        ZIndex: =30
+
