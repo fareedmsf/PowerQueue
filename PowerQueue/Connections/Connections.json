@@ -1,4 +1,66 @@
 {
+  "1472b4a9-7583-43d3-80d8-c2019665f748": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/juanq/gateway/greyhound/3000.150.11/1.0.1613.3116/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "a25ddbac-3ddb-45de-83df-260b4f58ed63"
+    ],
+    "id": "1472b4a9-7583-43d3-80d8-c2019665f748"
+  },
+  "a25ddbac-3ddb-45de-83df-260b4f58ed63": {
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-19.centralindia.logic.azure.com:443/workflows/4d7383d274a9438583deb769088d49e4/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=5t0Se2K4cZYi8gwT7HmQpGLBKQ3wRvr4xTx55ZHDpqc",
+      "workflowEndpoint": "/subscriptions/5072fcc3-8341-442e-9b98-4b441017c969/resourceGroups/86fb359e13604ab3b90d2a68e8c007b9-default86fb359e13604ab3b90d2a68e8c007b9-env/providers/Microsoft.Logic/workflows/7b9dc28d-8d8b-5cde-a0d3-b15ef3e5f2a6",
+      "workflowEntityId": "af00413e-5180-ed11-81ad-000d3ac9b1c8",
+      "workflowName": "7b9dc28d-8d8b-5cde-a0d3-b15ef3e5f2a6",
+      "workflowPath": "/subscriptions/5072fcc3-8341-442e-9b98-4b441017c969/resourceGroups/86fb359e13604ab3b90d2a68e8c007b9-default86fb359e13604ab3b90d2a68e8c007b9-env/providers/Microsoft.Logic/workflows/7b9dc28d-8d8b-5cde-a0d3-b15ef3e5f2a6"
+    },
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "1472b4a9-7583-43d3-80d8-c2019665f748": {
+          "value": "shared_sharepointonline"
+        },
+        "workflowEntityId": {
+          "value": "af00413e-5180-ed11-81ad-000d3ac9b1c8"
+        },
+        "workflowName": {
+          "value": "7b9dc28d-8d8b-5cde-a0d3-b15ef3e5f2a6"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_sharepointonline": {
+          "value": "1472b4a9-7583-43d3-80d8-c2019665f748"
+        },
+        "workflowEntityId": {
+          "value": "af00413e-5180-ed11-81ad-000d3ac9b1c8"
+        },
+        "workflowName": {
+          "value": "7b9dc28d-8d8b-5cde-a0d3-b15ef3e5f2a6"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "CreateSupportingDocument"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "1472b4a9-7583-43d3-80d8-c2019665f748"
+    },
+    "dependents": [],
+    "id": "a25ddbac-3ddb-45de-83df-260b4f58ed63"
+  },
   "cf6325b8-7b4f-4697-ad88-1a82c0515167": {
     "connectionParameters": {
       "workFlowCallbackUri": "https://prod-19.centralindia.logic.azure.com:443/workflows/418000c5d3f344b28894f9052ddebaa8/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Bh4aJP7osow-jTmdUczEA8mzJuX9sfLo_0WttV1IjOU",

@@ -1,6 +1,6 @@
 AssignView_DC As screen:
     OnVisible: |-
-        =NewForm(Form3);
+        =
         
         Set(pdfData,GetDataURI.Run(Gallery1.Selected.DocumentNumber,Dropdown1_8.SelectedText.AttachmentName));
 
@@ -9,7 +9,7 @@ AssignView_DC As screen:
         Height: =623
         Width: =604
         Y: =145
-        ZIndex: =8
+        ZIndex: =1
 
         Label3_3 As label:
             Font: =Font.'Segoe UI'
@@ -27,7 +27,7 @@ AssignView_DC As screen:
                 ="Bussiness Unit: "
             X: =11
             Y: =97
-            ZIndex: =3
+            ZIndex: =2
 
         Label3_2 As label:
             Font: =Font.'Segoe UI'
@@ -36,7 +36,7 @@ AssignView_DC As screen:
                 ="Legal Entity: "
             X: =11
             Y: =156
-            ZIndex: =4
+            ZIndex: =3
 
         Dropdown1_1 As dropdown:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -51,7 +51,7 @@ AssignView_DC As screen:
             SelectionFill: =RGBA(0, 0, 0, 0)
             X: =235
             Y: =97
-            ZIndex: =7
+            ZIndex: =4
 
         Dropdown1_2 As dropdown:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -66,7 +66,7 @@ AssignView_DC As screen:
             SelectionFill: =RGBA(0, 0, 0, 0)
             X: =235
             Y: =166
-            ZIndex: =8
+            ZIndex: =5
 
         Button1 As button:
             Fill: =RGBA(83, 35, 127, 1)
@@ -75,7 +75,7 @@ AssignView_DC As screen:
             Text: ="Assign To"
             X: =403
             Y: =519
-            ZIndex: =9
+            ZIndex: =6
 
         Label3_9 As label:
             Font: =Font.'Segoe UI'
@@ -83,7 +83,7 @@ AssignView_DC As screen:
             Text: ="Inv.No"
             X: =11
             Y: =23
-            ZIndex: =10
+            ZIndex: =7
 
         TextInput2_3 As text:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -93,7 +93,7 @@ AssignView_DC As screen:
             Width: =328
             X: =235
             Y: =28
-            ZIndex: =11
+            ZIndex: =8
 
         Label3_10 As label:
             Font: =Font.'Segoe UI'
@@ -102,7 +102,7 @@ AssignView_DC As screen:
                 ="Vendor Name:"
             X: =11
             Y: =282
-            ZIndex: =12
+            ZIndex: =9
 
         TextInput2_4 As text:
             Default: =LookUp(AGI_Vendors,VendorID=Dropdown1_7.SelectedText.VendorID).VendorName
@@ -112,7 +112,7 @@ AssignView_DC As screen:
             Width: =328
             X: =235
             Y: =282
-            ZIndex: =13
+            ZIndex: =10
 
         Label3 As label:
             Height: =36
@@ -121,7 +121,7 @@ AssignView_DC As screen:
             Width: =428
             X: =11
             Y: =577
-            ZIndex: =14
+            ZIndex: =11
 
         Label3_11 As label:
             Font: =Font.'Segoe UI'
@@ -130,7 +130,7 @@ AssignView_DC As screen:
                 ="Vendor TRN:"
             X: =11
             Y: =342
-            ZIndex: =15
+            ZIndex: =12
 
         Dropdown1_6 As dropdown:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -145,7 +145,7 @@ AssignView_DC As screen:
             SelectionFill: =RGBA(0, 0, 0, 0)
             X: =235
             Y: =347
-            ZIndex: =16
+            ZIndex: =13
 
         Button1_13 As button:
             Fill: =RGBA(83, 35, 127, 1)
@@ -157,13 +157,30 @@ AssignView_DC As screen:
                     'Legal Entity':Dropdown1_2.SelectedText.'Legal Entity',
                     VendorID:Dropdown1_7.Selected,
                     Vendor_TRN:Dropdown1_6.SelectedText.VendorTRN   
+                   
                 });
+                
+                //CreateSupportingDocument.Run(Gallery1.Selected.DocumentNumber,{{file:{AddMediaButton1.Media}}});
+                
+                ForAll(
+                    DataCardValue8.Attachments,
+                    CreateSupportingDocument.Run(
+                        Gallery1.Selected.DocumentNumber,
+                {
+                file:{
+                    contentBytes:Value,
+                    name:Name
+                }
+                
+                }));
+                
+                Reset(DataCardValue8);
                 
                 Notify(Gallery1.Selected.DocumentNumber&" Updated Successfully",NotificationType.Success)
             Text: ="Save"
             X: =219
             Y: =519
-            ZIndex: =17
+            ZIndex: =14
 
         Dropdown1_7 As dropdown:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -178,7 +195,7 @@ AssignView_DC As screen:
             SelectionFill: =RGBA(0, 0, 0, 0)
             X: =235
             Y: =224
-            ZIndex: =18
+            ZIndex: =15
 
         Button1_14 As button:
             Fill: =RGBA(83, 35, 127, 1)
@@ -186,93 +203,61 @@ AssignView_DC As screen:
             OnSelect: |
                 =
                 Patch(DocumentMasters,LookUp(DocumentMasters,DocumentNumber=Gallery1.Selected.DocumentNumber),{
-                    'Status (crd1e_status)':"Reject" 
+                    'Status (crd1e_status)':"Cancelled" 
                 });
             Text: ="Reject"
             X: =28
             Y: =519
+            ZIndex: =16
+
+        Label3_12 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =32
+            Text: ="Supporting Document"
+            Width: =191
+            X: =10
+            Y: =382
             ZIndex: =19
 
-        Form3 As form:
-            DataSource: =AGI_PowerQueue_Attachments
-            Height: =100
-            Visible: =false
-            Width: =604
-            Y: =403
+        Icon4 As icon.AddDocument:
+            Height: =45
+            Icon: =Icon.AddDocument
+            OnSelect: =Select(DataCardValue8)
+            Width: =52
+            X: =499
+            Y: =440
             ZIndex: =20
 
-            Doc_Attachment_DataCard3 As typedDataCard.fileEditCard:
-                BorderStyle: =BorderStyle.Solid
-                DataField: ="crd1e_doc_attachment"
-                Default: |-
-                    =If(!IsBlank(ThisItem.Doc_Attachment.FileName), Table({DisplayName: ThisItem.Doc_Attachment.FileName, Value: ThisItem.Doc_Attachment.Value}), Blank())
-                DisplayMode: =Parent.DisplayMode
-                DisplayName: =DataSourceInfo([@AGI_PowerQueue_Attachments],DataSourceInfo.DisplayName,"crd1e_doc_attachment")
-                Fill: =RGBA(0, 0, 0, 0)
-                Height: =80
-                Required: =false
-                Update: =DataCardValue10.Attachments
-                Visible: =true
-                Width: =603
-                X: =0
-                Y: =0
-                ZIndex: =1
-
-                DataCardKey10 As label:
-                    AutoHeight: =true
-                    FontWeight: =FontWeight.Semibold
-                    Height: =34
-                    Text: ="Select a file"
-                    Width: =Parent.Width - 400
-                    Wrap: =false
-                    X: =14
-                    Y: =10
-                    ZIndex: =1
-
-                DataCardValue10 As attachments:
-                    AddAttachmentText: ="Upload file"
-                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    DisplayMode: =Parent.DisplayMode
-                    Height: =40
-                    IsInDataCard: =true
-                    Items: =Parent.Default
-                    MaxAttachments: =1
-                    MaxAttachmentsText: =""
-                    NoAttachmentsText: ="There is no file."
-                    PaddingBottom: =5
-                    PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                    PaddingRight: =5
-                    PaddingTop: =5
-                    Tooltip: =
-                    Width: =Parent.Width-20
-                    X: =10
-                    Y: =44
-                    ZIndex: =2
-
-                ErrorMessage7 As label:
-                    AutoHeight: =true
-                    Height: =10
-                    Live: =Live.Assertive
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Text: =Parent.Error
-                    Visible: =Parent.DisplayMode=DisplayMode.Edit
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardValue10.Y + DataCardValue10.Height
-                    ZIndex: =3
-
-                StarVisible7 As label:
-                    Align: =Align.Center
-                    Height: =DataCardKey10.Height
-                    Text: ="*"
-                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                    Width: =30
-                    Wrap: =false
-                    Y: =DataCardKey10.Y
-                    ZIndex: =4
+        DataCardValue8 As attachments:
+            AddAttachmentText: ="Upload file"
+            BorderColor: =Self.Fill
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisplayMode: =Parent.DisplayMode
+            DropTargetBackgroundColor: =RGBA(0, 0, 0, 0)
+            DropTargetBorderColor: =RGBA(0, 0, 0, 0)
+            DropTargetBorderStyle: =BorderStyle.None
+            DropTargetBorderThickness: =0
+            Fill: =RGBA(0, 0, 0, 0)
+            FontWeight: =FontWeight.Lighter
+            Height: =108
+            HoverFill: =RGBA(0, 0, 0, 0)
+            IsInDataCard: =true
+            Items: =
+            MaxAttachments: =10
+            MaxAttachmentsText: =""
+            NoAttachmentsText: ="There is no file."
+            PaddingBottom: =5
+            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+            PaddingRight: =5
+            PaddingTop: =5
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Size: =10
+            Width: =576
+            X: =11
+            Y: =408
+            ZIndex: =21
 
         AddMediaWithImage1 As group:
             Height: =5
@@ -288,10 +273,11 @@ AssignView_DC As screen:
                     =//If(IsBlank(AddMediaButton1.Media), SampleImage, AddMediaButton1.Media)
                     'Group 64'
                 PaddingLeft: =500
+                Visible: =false
                 Width: =559
                 X: =10
                 Y: =440
-                ZIndex: =22
+                ZIndex: =17
 
             AddMediaButton1 As addMedia:
                 ChangePictureText: =AddMediaButton1.FileName
@@ -299,20 +285,11 @@ AssignView_DC As screen:
                 Height: =26
                 Size: =15
                 Text: ="Select a file"
+                Visible: =false
                 Width: =520
                 X: =50
                 Y: =451
-                ZIndex: =23
-
-        Label3_12 As label:
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =32
-            Text: ="Supporting Document"
-            Width: =191
-            X: =11
-            Y: =408
-            ZIndex: =24
+                ZIndex: =18
 
     PdfViewer1 As pdfViewer:
         BorderColor: =RGBA(0, 0, 0, 1)
@@ -324,14 +301,14 @@ AssignView_DC As screen:
         Width: =762
         X: =604
         Y: =145
-        ZIndex: =9
+        ZIndex: =2
 
     Rectangle1_3 As rectangle:
         Fill: =RGBA(235, 219, 250, 1)
         Height: =45
         Width: =1366
         Y: =100
-        ZIndex: =10
+        ZIndex: =3
 
     Icon1 As icon.ChevronLeft:
         Height: =30
@@ -340,7 +317,7 @@ AssignView_DC As screen:
         Width: =42
         X: =10
         Y: =107
-        ZIndex: =11
+        ZIndex: =4
 
     Label4 As label:
         Align: =Align.Center
@@ -350,14 +327,14 @@ AssignView_DC As screen:
         Text: =Gallery1.Selected.DocumentNumber
         X: =Parent.Width/2 -150
         Y: =102
-        ZIndex: =12
+        ZIndex: =5
 
     Rectangle1_2 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 1)
         Fill: =RGBA(255, 255, 255, 1)
         Width: =Parent.Width-250
         X: =250
-        ZIndex: =13
+        ZIndex: =6
 
     Label1_1 As label:
         FontWeight: =FontWeight.Bold
@@ -366,19 +343,19 @@ AssignView_DC As screen:
         Width: =300
         X: =276
         Y: =30
-        ZIndex: =14
+        ZIndex: =7
 
     Image2_1 As image:
         Fill: =RGBA(255, 255, 255, 1)
         Image: =logo
         Width: =250
-        ZIndex: =15
+        ZIndex: =8
 
     Rectangle4_1 As rectangle:
         Fill: =RGBA(0, 0, 0, 1)
         Width: =1
         X: =264
-        ZIndex: =16
+        ZIndex: =9
 
     Dropdown1_8 As dropdown:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -396,5 +373,5 @@ AssignView_DC As screen:
         SelectionFill: =RGBA(0, 0, 0, 0)
         X: =888
         Y: =160
-        ZIndex: =17
+        ZIndex: =10
 
