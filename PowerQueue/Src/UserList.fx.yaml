@@ -2,7 +2,7 @@ UserList As screen:
     Fill: =RGBA(240, 243, 248,1)
 
     "Gallery7 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
-        Height: =490
+        Height: =544
         Items: |-
             =With({records:'AGI_User Masters'},
                 ForAll(Sequence(CountRows(records)), Patch(Last(FirstN(records,Value)), {rowNumber:Value}))
@@ -12,7 +12,7 @@ UserList As screen:
         TemplatePadding: =0
         TemplateSize: =79
         Width: =1366
-        Y: =170
+        Y: =224
         ZIndex: =1
 
         Label4_2 As label:
@@ -99,7 +99,7 @@ UserList As screen:
         Height: =70
         OnSelect: =
         Width: =1366
-        Y: =100
+        Y: =154
         ZIndex: =2
 
     Label4_3 As label:
@@ -111,9 +111,9 @@ UserList As screen:
         OnSelect: =
         Size: =15
         Text: ="User Id"
-        Width: =118
-        X: =12
-        Y: =116
+        Width: =130
+        X: =25
+        Y: =169
         ZIndex: =3
 
     Label5_2 As label:
@@ -126,8 +126,8 @@ UserList As screen:
         Size: =15
         Text: ="Name"
         Width: =236
-        X: =179
-        Y: =116
+        X: =198
+        Y: =169
         ZIndex: =4
 
     Label7_1 As label:
@@ -139,8 +139,8 @@ UserList As screen:
         OnSelect: =
         Size: =15
         Text: ="Role"
-        X: =645
-        Y: =115
+        X: =664
+        Y: =168
         ZIndex: =5
 
     Label8_1 As label:
@@ -153,8 +153,8 @@ UserList As screen:
         Size: =15
         Text: ="Manager"
         Width: =130
-        X: =961
-        Y: =116
+        X: =980
+        Y: =169
         ZIndex: =6
 
     Label6_2 As label:
@@ -168,8 +168,8 @@ UserList As screen:
         Size: =15
         Text: ="Active"
         Width: =119
-        X: =457
-        Y: =115
+        X: =476
+        Y: =168
         ZIndex: =7
 
     Label9 As label:
@@ -180,8 +180,8 @@ UserList As screen:
         Size: =15
         Text: ="Edit"
         Width: =55
-        X: =1266
-        Y: =118
+        X: =1285
+        Y: =171
         ZIndex: =8
 
     Rectangle1_12 As rectangle:
@@ -211,4 +211,20 @@ UserList As screen:
         Width: =1
         X: =264
         ZIndex: =13
+
+    Rectangle1_11 As rectangle:
+        Fill: =RGBA(235, 219, 250, 1)
+        Height: =45
+        Width: =1366
+        Y: =107
+        ZIndex: =14
+
+    Icon1_4 As icon.ChevronLeft:
+        Height: =30
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Back(ScreenTransition.Cover)
+        Width: =42
+        X: =25
+        Y: =112
+        ZIndex: =15
 

@@ -29,6 +29,9 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
+        "a0d4f601-64c6-4cdb-b419-a84d477f7765": {
+          "value": "shared_commondataserviceforapps_2"
+        },
         "workflowEntityId": {
           "value": "45b15a17-2880-ed11-81ad-000d3ac9b1c8"
         },
@@ -37,6 +40,15 @@
         }
       },
       "parameterHintsV2": {
+        "shared_commondataserviceforapps": {
+          "value": "a0d4f601-64c6-4cdb-b419-a84d477f7765"
+        },
+        "shared_commondataserviceforapps_1": {
+          "value": "a0d4f601-64c6-4cdb-b419-a84d477f7765"
+        },
+        "shared_commondataserviceforapps_2": {
+          "value": "a0d4f601-64c6-4cdb-b419-a84d477f7765"
+        },
         "workflowEntityId": {
           "value": "45b15a17-2880-ed11-81ad-000d3ac9b1c8"
         },
@@ -59,8 +71,7 @@
   },
   "a0d4f601-64c6-4cdb-b419-a84d477f7765": {
     "connectionParameters": {
-      "sku": "Enterprise",
-      "token:grantType": "code"
+      "sku": "Enterprise"
     },
     "connectionRef": {
       "displayName": "Microsoft Dataverse",
