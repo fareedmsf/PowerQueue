@@ -1,6 +1,13 @@
 {
   "QualifiedValues": [
     {
+      "Kind": "default.cds_crd1e_agivendor_user_forms",
+      "Namespace": "AGIVendor_Users (Forms)",
+      "Values": {
+        "Information": "fedff446-946c-450a-bd5d-cfd66de5f5a2"
+      }
+    },
+    {
       "Kind": "default.cds_crd1e_agi_department_forms",
       "Namespace": "AGI_Departments (Forms)",
       "Values": {
@@ -26,6 +33,20 @@
       "Namespace": "AGI_User Masters (Forms)",
       "Values": {
         "Information": "5b94d26e-8cad-4fe0-ac74-e55f42147c31"
+      }
+    },
+    {
+      "Kind": "default.cds_crd1e_agi_user_bu_forms",
+      "Namespace": "AGI_User_BUS (Forms)",
+      "Values": {
+        "Information": "9217825d-6a3b-482c-ab40-ed79f9eda358"
+      }
+    },
+    {
+      "Kind": "default.cds_crd1e_agi_user_legalentity_forms",
+      "Namespace": "AGI_User_LegalEntities (Forms)",
+      "Values": {
+        "Information": "055a47bd-0c91-42ea-80bd-37954b0f21af"
       }
     },
     {
@@ -68,27 +89,6 @@
       "Namespace": "Queue_Statuses (Forms)",
       "Values": {
         "Information": "79a049f0-9c0e-474c-9b67-f45ee04d4bd6"
-      }
-    },
-    {
-      "Kind": "default.cds_crd1e_agi_user_bu_forms",
-      "Namespace": "AGI_User_BUS (Forms)",
-      "Values": {
-        "Information": "9217825d-6a3b-482c-ab40-ed79f9eda358"
-      }
-    },
-    {
-      "Kind": "default.cds_crd1e_agi_user_legalentity_forms",
-      "Namespace": "AGI_User_LegalEntities (Forms)",
-      "Values": {
-        "Information": "055a47bd-0c91-42ea-80bd-37954b0f21af"
-      }
-    },
-    {
-      "Kind": "default.cds_crd1e_agivendor_user_forms",
-      "Namespace": "AGIVendor_Users (Forms)",
-      "Values": {
-        "Information": "fedff446-946c-450a-bd5d-cfd66de5f5a2"
       }
     },
     {
