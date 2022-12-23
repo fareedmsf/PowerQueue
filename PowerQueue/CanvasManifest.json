@@ -97,11 +97,11 @@
     "FileID": "a6eaf7c3-42ba-4ac2-99bd-0e09691dfda4",
     "Id": "a6eaf7c3-42ba-4ac2-99bd-0e09691dfda4",
     "InstrumentationKey": "",
-    "Name": "Power Queue",
+    "Name": "Power Queue 1",
     "OriginatingVersion": "1.326"
   },
   "PublishInfo": {
-    "AppName": "Power Queue",
+    "AppName": "Power Queue 1",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",

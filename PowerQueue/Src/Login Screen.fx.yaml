@@ -83,3 +83,10 @@
         Y: =562
         ZIndex: =12
 
+    Label3 As label:
+        Align: =Align.Center
+        Text: ="Text"
+        X: =1065
+        Y: =36
+        ZIndex: =13
+
